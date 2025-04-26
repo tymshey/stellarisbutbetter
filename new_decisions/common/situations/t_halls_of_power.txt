@@ -1,0 +1,138 @@
+# Halls of power
+
+t_halls_of_power_situation = {
+	picture = GFX_evt_legendary_leader
+
+	complete_icon = situation_outcome_icon_unknown
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 200
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 400
+			on_first_enter = {
+				
+			}
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 600
+			on_first_enter = {
+				
+			}
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_blue
+			end = 800
+			on_first_enter = {
+				
+			}
+		}
+		stage_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_blue
+			end = 1000
+			on_first_enter = {
+				
+			}
+		}
+	}
+
+	approach = {
+		name = t_halls_of_power_situation_approach_ecologism
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+
+		on_select = {
+			
+		}
+
+		modifier = {
+			country_energy_produces_mult = 0.2
+			country_food_produces_mult = 0.2
+			country_alloys_produces_mult = -0.1
+			country_influence_produces_mult = -0.2
+		}
+	}
+	
+	approach = {
+		name = t_halls_of_power_situation_approach_industrialism
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+
+		on_select = {
+			
+		}
+
+		modifier = {
+			country_influence_produces_mult = -0.2
+			country_energy_produces_mult = -0.2
+			country_food_produces_mult = -0.25
+			country_minerals_produces_mult = 0.2
+			country_alloys_produces_mult = 0.2
+		}
+	}
+	
+	approach = {
+		name = t_halls_of_power_situation_approach_moderatism
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+
+		on_select = {
+			
+		}
+
+		modifier = {
+			country_influence_produces_mult = 0.2
+			country_unity_produces_mult = 0.2
+			planet_stability_add = 20
+		}
+	}
+	
+	approach = {
+		name = t_halls_of_power_situation_approach_totalism
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_red
+
+		on_select = {
+			
+		}
+
+		modifier = {
+			country_influence_produces_mult = 0.1
+			country_unity_produces_mult = 0.3
+			pop_amenities_usage_mult = 0.35
+		}
+	}
+
+
+	on_monthly = {
+		random_events = {
+			40 = 0
+		}
+	}
+
+	monthly_progress = {
+		base = 0
+	}
+
+	on_progress_complete = {
+		custom_tooltip = t_halls_of_power_situation_outcome
+		hidden_effect = {
+			target = {
+				set_planet_flag = birch_expedition_10_complete
+			}
+			situation_event = { id = giga_birch.10000 }
+		}
+		set_situation_locked = no
+	}
+}

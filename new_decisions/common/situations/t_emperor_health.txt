@@ -1,0 +1,63 @@
+# The Sunset
+
+t_emperor_health_situation = {
+	picture = GFX_evt_legendary_leader
+
+	complete_icon = situation_outcome_icon_unknown
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 200
+			on_first_enter = {
+				
+			}
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 300
+			on_first_enter = {
+				
+			}
+		}
+	}
+
+	approach = {
+		name = t_emperor_health_situation_approach
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+
+		on_select = {
+			
+		}
+
+		modifier = {
+			country_influence_produces_mult = -0.1
+			country_unity_produces_mult = 0.25
+		}
+	}
+
+	on_monthly = {
+		random_events = {
+			40 = 0
+		}
+	}
+
+	monthly_progress = {
+		base = 2
+	}
+
+	on_progress_complete = {
+		custom_tooltip = t_emperor_health_situation_outcome
+		situation_event = { id = t_roman_origin_events.4 }
+		set_situation_locked = yes
+	}
+}

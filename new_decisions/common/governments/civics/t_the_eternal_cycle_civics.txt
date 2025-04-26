@@ -1,0 +1,21 @@
+civic_t_millennia_of_experience = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		origin = {
+			OR = {
+				value = origin_the_eternal_cycle
+			}
+		}
+	}
+	modification = no
+	random_weight = { base = 0 }
+	modifier = {
+		country_edict_cap_add = 1
+		pop_cat_ruler_political_power = 0.05
+		BIOLOGICAL_species_trait_points_add = 2
+		ascension_perks_add = 2
+	}
+}

@@ -1,0 +1,25 @@
+music = {
+	name = "Verify Your Clock"
+	file = "Verify Your Clock.ogg"
+	volume = 1.55
+}
+music = {
+	name = "Burgundian Lullaby"
+	file = "Burgundian Lullaby.ogg"
+	volume = 1.55
+}
+music = {
+	name = "Backroom Deal"
+	file = "Backroom Deal.ogg"
+	volume = 1.55
+}
+music = {
+	name = "Minutes To Midnight"
+	file = "Minutes To Midnight.ogg"
+	volume = 1.55
+}
+music = {
+	name = "Silicon Dreams"
+	file = "Silicon Dreams.ogg"
+	volume = 1.55
+}

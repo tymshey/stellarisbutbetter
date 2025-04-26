@@ -1,0 +1,20 @@
+t_frameworld_expansion = {
+	is_for_colonizable = yes
+	icon = d_frameworld_station
+	category = deposit_cat_energy
+	use_for_min_max_adjustments = yes
+  
+	drop_weight = { weight = 0 }
+	potential = { always = yes }
+   
+	triggered_planet_modifier = {
+		potential = { 
+			exists = owner
+			owner = {
+				has_origin = origin_frameworld
+			}
+		}
+
+		planet_housing_mult = 0.05
+	}
+}

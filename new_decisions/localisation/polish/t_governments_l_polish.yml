@@ -1,0 +1,15 @@
+﻿l_polish:
+ ####################################
+ # Government related stuff
+ ####################################
+
+ # Civics
+
+ civic_t_ancient_protectors:0 "Ancient Protectors"
+ civic_t_ancient_protectors_desc:0 "This civilization devoted themselves to defend the galaxy from extragalactic, possibly even extradimensional threads."
+ civic_t_millennia_of_experience:0 "Millennia of Experience"
+ civic_t_millennia_of_experience_desc:0 "This civilization has thousands of years of experience in running a galactic empire."
+ civic_t_dystopian_society:0 "Dystopian Society"
+ civic_t_dystopian_society_desc:0 "This civilization underwent enormous changes in their recent history. They have a strong concept of a "New Order", enforced on their citizens both willingly, and unwillingly."
+ civic_t_engineering_protocols:0 "Engineering Protocols"
+ civic_t_engineering_protocols_desc:0 "This machine intelligence specializes in engineering and megastructure construction."

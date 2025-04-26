@@ -1,0 +1,31 @@
+﻿l_polish:
+ ####################################
+ # Events
+ ####################################
+ 
+ # The Lost Empire Origin Events
+ 
+ t_the_lost_empire.1.name:0 "The Lost Empire"
+ t_the_lost_empire.1.desc:0 "It's time to rise from the fallen. After Centuries, we are finally returning to the stars to reclaim our lost glory and power."
+ t_the_lost_empire.1.a:0 "Ok"
+ 
+ # The Eternal Cycle Origin Events
+ 
+ t_the_eternal_cycle.1.name:0 "The Eternal Cycle"
+ t_the_eternal_cycle.1.desc:0 "It's time to rise from the fallen and continue the cycle. After Centuries, we are finally returning to the stars to reclaim our lost glory and power. §RWill you break the cycle?§!"
+ t_the_eternal_cycle.1.a:0 "Ok"
+ 
+ # Roman Events
+ 
+ t_roman_origin_events.2.name:0 "Political Promises"
+ t_roman_origin_events.2.desc:0 "[Root.GetRulerName] looked outside the window of the old imperial palace at the magnificent monuments and elegant promenades designed by Rome's greatest architects. Oh, if only Augustus was here to admire the work of his descendants. He would be proud of them. Just as the [Root.GetRulerTitle] is. Suddenly [Root.GetRulerName] remembered, he ordered a meeting of the Roman political council, the most powerful politicians of the state, to discuss the situation on [Root.Capital.GetName]. Increasing unrest and protests. Disobedience towards the government. The men gathered in the conference hall of the old palace. After several hours of discussions, arguements, and much more, [Root.GetRulerName] and the council agreed upon making vast political promises to the public. Surely we can keep such an easy promise as peace and prosperity to all?"
+ t_roman_origin_events.2.a:0 "Bread and circuses!"
+ 
+ t_roman_origin_events.3.name:0 "A Mysterious Sound"
+ t_roman_origin_events.3.desc:0 "The day was going normal so far. Almost too normal for someone so powerful and important as [Root.GetRulerName]. He got up from the chair in his office and wondered: what will the next undoubtedly eventful day bring? Or month? Or year, and so on. The [Root.GetRulerTitle] sat down. After a few moments of looking at his monitors, he stood up again. As Callistus rose up from his chair, he heard a strange sound. A few seconds long, he thought. He sharpened his senses to hear it, perhaps determine what it was. Silence. The mysterious sound did not repeat itself."
+ t_roman_origin_events.3.a:0 ""What was that?""
+ t_roman_origin_events_3_tooltip:0 "§PCallistus' health deteriorates.§!"
+ 
+ t_roman_origin_events.4.name:0 "The Sunset"
+ t_roman_origin_events.4.desc:0 "The inevitable had arrived. Tragedy strikes! Our beloved [Root.GetRulerTitle] [Root.GetRulerName] suffered a fatal heart failure today. The Empire mourns our leader, while officials from all over the Empire travel to the Imperial complex to attend a ceremony never before seen in the history of Humanity. The government is disorganized, and cannot achieve a consensus on the situation. §PAfter all, who could expect such a magnificent man to die?§!"
+ t_roman_origin_events.4.a:0 "What do we do now?"

@@ -1,0 +1,56 @@
+t_decision_planet_activate_system_shield = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_divine_algorithm
+
+	allow = {
+		is_planet_class = pc_t_dimensional_alignment
+		NOT = {
+			has_modifier = t_system_shield
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = "t_system_shield" days = -1 }
+		solar_system = {
+			set_star_flag = forbid_blokkat_stripmine # even blokkats cant overrun the alignment shield
+			create_ambient_object = {
+				location = star
+				type = kaleidoscope_neutral
+			}
+			# spawn_kaleidoscope_effect = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		is_planet_class = pc_t_dimensional_alignment
+	}
+}
+
+t_decision_planet_deactivate_system_shield = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_divine_algorithm
+
+	allow = {
+		has_modifier = t_system_shield
+	}
+
+	effect = {
+		remove_modifier = t_system_shield
+		remove_kaleidoscope_effect = yes
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		has_modifier = t_system_shield
+		always = no # disabled for now
+	}
+}

@@ -1,0 +1,38 @@
+# Events for "The Eternal Cycle" origin
+
+namespace = t_the_eternal_cycle
+
+# Introduction event (hidden)
+country_event = {
+	id = t_the_eternal_cycle.1
+	hide_window = yes
+	
+	trigger = {
+		has_origin = origin_the_eternal_cycle
+		NOT = {
+			has_country_flag = t_the_eternal_cycle_event_flag
+		}
+	}
+
+ 	immediate = {
+ 		set_country_flag = t_the_eternal_cycle_event_flag
+		capital_scope = {
+			add_district = district_t_utopian_arcology
+			add_district = district_t_utopian_arcology
+			add_district = district_t_utopian_arcology
+			add_district = district_t_dimensional_fabricator
+			add_district = district_t_dimensional_fabricator
+			add_district = district_t_eternal_library
+			add_district = district_t_eternal_gardens
+			add_district = district_t_eternal_fortress
+		}
+		ruler = {
+			add_trait = leader_trait_the_apparatus_luminary
+			add_trait = leader_trait_ruler_chosen
+		}
+		add_relic = r_t_ancient_data_cache
+		add_relic = r_t_ancient_crystal_archive
+		give_technology = { tech = tech_dark_matter_power_core message = yes }
+		give_technology = { tech = tech_dark_matter_propulsion message = yes }
+ 	}
+}

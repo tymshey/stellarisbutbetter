@@ -1,0 +1,11 @@
+﻿l_english:
+ ####################################
+ # Components
+ ####################################
+ 
+ # Enigmatic tier utility
+ ENIGMATIC_SHIELDING:0 "Enigmatic Shielding"
+ ENIGMATIC_SHIELDING_DESC:0 "Much stronger and more advanced variant of the regular dark matter deflectors that uses little understood dark matter enigmatic technology."
+ SMALL_ENIGMATIC_SHIELDING:0 "Small Enigmatic Shielding"
+ MEDIUM_ENIGMATIC_SHIELDING:0 "Medium Enigmatic Shielding"
+ LARGE_ENIGMATIC_SHIELDING:0 "Large Enigmatic Shielding"

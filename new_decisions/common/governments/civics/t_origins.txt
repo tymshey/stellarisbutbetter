@@ -1,0 +1,100 @@
+# Origins
+# Made by tymshey
+
+origin_the_lost_empire = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_remnant.dds"
+	picture = GFX_origin_remnants
+
+	starting_colony = pc_relic  #Changes homeworld class regardless of what is picked for empire
+	max_once_global = yes
+
+	playable = {
+		always = no # broken
+	}
+
+	possible = {
+		civics = {
+			NOT = { value = civic_agrarian_idyll }
+		}
+	}
+
+	description = "origin_tooltip_the_lost_empire_effects"
+
+	flags = { custom_start_screen first_contact_event Story7}
+
+	traits = {
+		
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 5
+	}
+}
+
+origin_the_eternal_cycle = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_remnant.dds"
+	picture = GFX_origin_remnants
+
+	starting_colony = pc_t_throne_of_eternity  #Changes homeworld class regardless of what is picked for empire
+	max_once_global = yes
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+		civics = {
+			NOT = { value = civic_agrarian_idyll }
+		}
+	}
+
+	description = "origin_tooltip_the_eternal_cycle_effects"
+
+	flags = { custom_start_screen first_contact_event Story7}
+
+	traits = {
+		
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_t_roman = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_hegemon.dds"
+	picture = GFX_origin_legendary_leader
+
+	max_once_global = yes
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+		civics = {
+			NOT = { value = civic_agrarian_idyll }
+		}
+	}
+
+	description = "origin_tooltip_t_roman_effect"
+
+	flags = { custom_start_screen first_contact_event Story7}
+
+	traits = {
+		
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 0
+	}
+}

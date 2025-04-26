@@ -1,0 +1,147 @@
+# These may be overwitten in an "extendable" manner, meaning (for example) you can create a second "auth_democratic" with extra swaps in it.
+# WARNING: The extend functionality breaks if you make changes in runtime and will require a restart to work correctly.
+#auth_example = {
+#	potential = {}										# requirements list, see ../readme_requirements.txt
+#	possible = {}										# requirements list, see ../readme_requirements.txt
+#	random_weight = { value = 1 }						# random weight, no scope; default: 1
+#
+#	traits = { trait = tait1 trait = tait2 }			# force listed traits on the founder species (only verified for empire designs, no effect after game start)
+#
+#	has_heir = yes / no									# default: no; you can either have a hereditary system (has_heir = yes), or an election system (has_heir = no)
+#	election_type = oligarchic / democratic	/ none		# default: none; oligarchic generate candidates only from leaders in the country
+#	election_term_years = 40							# default: 0
+#	election_term_variance = 10							# default: 0; actual election term = election_term_years +/- election_term_variance
+#	re_election_allowed = yes / no						# default: no
+#	can_have_emergency_elections = yes / no				# default: no
+#	max_election_candidates = 5							# default: -1; -1 == no limit
+#	can_reform = yes / no								# default = yes, whether you can reform into/out of this government type
+#	ruler_council_position = <>							# decides the authority's ruler council position, these are defined in 00_councilors.txt
+#
+#	has_agendas = yes / no								# default: no, replaced with Council Agendas
+#	uses_mandates = yes / no							# default: no, replaced with Council Agendas
+#
+#	advanced_authority_swap	= {							# To make sure everything is updated correctly after triggering a swap, use <advanced_authority_refresh = yes>
+#		name = "<name key>"								# Will also be used to attempt and find an icon from "interface/icons/governments/authorities/"
+#		description = "<localization key>"				# Used to customize the description in the case of a swap
+#		inherit_icon = yes/no							# Decides if we should inherit the icon of the original authority
+#		inherit_effects = yes/no						# Decides if we should inherit the modifiers from the base Authority and combine it with the advanced authority
+#		ruler_council_position = <>						# Used to swap out the ruler council position
+#		trigger = {}									# This will decide when the swap to advanced authority type will be made
+#		modifier = {}									# The modifiers that are used instead of the authority after the swap, can include the original by using inherit_effects
+#		tags = { <key> <key2> }							# Translation tags used for the authority swap
+#		has_heir = yes / no								# you can either have a hereditary system (has_heir = yes), or an election system (has_heir = no)
+#		election_type = oligarchic / democratic	/ none	# oligarchic generate candidates only from leaders in the country
+#		election_term_years = 40						#
+#		election_term_variance = 10						# actual election term = election_term_years +/- election_term_variance
+#		can_have_emergency_elections = yes / no			#
+#		max_election_candidates = 5						# -1 == no limit
+#		weight = {}										# If there are multiple options, the one with the highest weight is picked. Scope: Country
+#	}
+#
+#	tags = { <key> <key2> }								# add these translation tags to the description
+#}
+
+auth_individual_machine_intelligence = {
+	# machine_empire = yes
+	has_heir = no
+	election_type = none
+	has_factions = no
+	can_reform = no
+	localization_postfix = machine_intelligence
+
+	valid_for_released_vassal = no
+
+	ruler_council_position = councilor_ruler_machine_intelligence
+
+	playable = {
+		always = no # off for now
+	}
+	possible = {
+		has_civic = civic_t_machine_emperor
+		species_archetype = { value = MACHINE }
+	}
+	random_weight = {
+		base = 2
+	}
+
+	traits = {
+		trait = trait_machine_unit
+	}
+
+	country_modifier = {
+		colony_start_num_pops_add = 1
+		planet_pop_assembly_add = 1
+		station_gatherers_produces_mult = 0.1
+		pop_growth_speed_reduction = 0.5
+	}
+
+	tags = {
+		AUTH_MACHINE_NATIVE_POPS
+		AUTH_MACHINE_FOREIGN_POP_SURVIVAL
+		AUTH_MACHINE_TECH_ADDITIONS
+		AUTH_MACHINE_TECH_RESTRICTIONS
+		AUTH_MACHINE_ASCENSION_RESTRICTIONS
+		NEW_LINE
+		AUTHORITY_SUCCESSION_TYPE
+		AUTH_GESTALT_IMMORTAL_LEADERS
+	}
+
+	#Memory Aggregator
+	advanced_authority_swap	= {
+		name = "auth_memory_aggregator"
+		description = "auth_memory_aggregator_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = driven_memory_aggregator
+		}
+		modifier = {
+			custom_tooltip = auth_memory_aggregator_tt
+			show_only_custom_tooltip = no
+			colony_start_num_pops_add = 1
+
+			planet_pop_assembly_add = 1
+			pop_growth_speed_reduction = 0.25
+			empire_size_pops_mult = -0.1
+			MACHINE_species_trait_picks_add = 1
+		}
+		tags = {
+			AUTH_MACHINE_NATIVE_POPS
+			AUTH_MACHINE_FOREIGN_POP_SURVIVAL
+			AUTH_MACHINE_TECH_ADDITIONS
+			AUTH_MACHINE_TECH_RESTRICTIONS
+			AUTH_ASSIMILATOR_ASCENSION_RESTRICTIONS
+			NEW_LINE
+			AUTHORITY_SUCCESSION_TYPE
+			AUTH_GESTALT_IMMORTAL_LEADERS
+		}
+	}
+	#Neural Chorus
+	advanced_authority_swap	= {
+		name = "auth_neural_chorus"
+		description = "auth_neural_chorus_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = driven_neural_chorus
+		}
+		modifier = {
+			custom_tooltip = auth_driven_neural_chorus_tt
+			show_only_custom_tooltip = no
+			colony_start_num_pops_add = 1
+			planet_pops_cyborgs_upkeep_mult = 0.1
+		}
+		tags = {
+			AUTH_MACHINE_NATIVE_POPS
+			AUTH_MACHINE_FOREIGN_POP_SURVIVAL
+			AUTH_MACHINE_TECH_ADDITIONS
+			AUTH_MACHINE_TECH_RESTRICTIONS
+			AUTH_ASSIMILATOR_ASCENSION_RESTRICTIONS
+			NEW_LINE
+			AUTHORITY_SUCCESSION_TYPE
+			AUTH_GESTALT_IMMORTAL_LEADERS
+		}
+	}
+}

@@ -1,0 +1,135 @@
+﻿l_polish:
+ ####################################
+ # General and misc localisation
+ ####################################
+ 
+ # Modifiers
+ 
+ planet_multidimensional_habitation_boost:0 "Improved Habitation Infrastructure"
+ planet_multidimensional_habitation_boost_desc:0 "This world has multidimensional processors allowing habitation in artifital virtual realities on an enormous scale."
+ planet_underground_district_boost:0 "Underground districts"
+ planet_underground_district_boost_desc:0 "This world has underground infrastructure."
+ t_planet_enigmatic_infrastructure:0 "Enigmatic Infrastructure"
+ t_planet_enigmatic_infrastructure_desc:0 ""
+ 
+ t_roman_origin_modifier:0 "The Cradle and Heart of Rome"
+ t_frameworld_origin_modifier:0 "The Frameworld Nexus"
+ 
+ t_planet_building_slot_boost_1:0 "Expanded Infrastructure: Level 1"
+ t_planet_building_slot_boost_2:0 "Expanded Infrastructure: Level 2"
+ t_planet_building_slot_boost_3:0 "Expanded Infrastructure: Level 3"
+ t_planet_building_slot_boost_4:0 "Expanded Infrastructure: Level 4"
+ t_planet_building_slot_boost_5:0 "Expanded Infrastructure: Level 5"
+ 
+ t_planet_population_growth_modifier:0 "Assisted Cloning"
+ t_planet_aggressive_growth_policy_modifier:0 "Aggressive Growth Policy"
+ 
+ # Decisions
+ 
+ decision_planet_underground_districts:0 "Build underground infrastructure"
+ decision_planet_underground_districts_desc:0 "Build underground infrastructure."
+ decision_planet_multidimensional_habitation:0 "Improve Habitation Infrastructure"
+ decision_planet_multidimensional_habitation_desc:0 "Build multidimensional processors to allow habitation in artifital virtual realities."
+ t_decision_planet_enigmatic_infrastructure:0 "Enigmatic Infrastructure Construction"
+ t_decision_planet_enigmatic_infrastructure_desc:0 ""
+ decision_planet_build_gaia_arcology:0 "Build Gaia Arcology"
+ decision_planet_build_gaia_arcology_desc:0 ""
+ t_decision_planet_build_enigmatic_ecumenopolis:0 "The Ultimate Arcology"
+ t_decision_planet_build_enigmatic_ecumenopolis_desc:0 ""
+ 
+ decision_t_planet_building_slot_1:0 "Expand Infrastructure: Level 1"
+ decision_t_planet_building_slot_1_desc:0 ""
+ decision_t_planet_building_slot_2:0 "Expand Infrastructure: Level 2"
+ decision_t_planet_building_slot_2_desc:0 ""
+ decision_t_planet_building_slot_3:0 "Expand Infrastructure: Level 3"
+ decision_t_planet_building_slot_3_desc:0 ""
+ decision_t_planet_building_slot_4:0 "Expand Infrastructure: Level 4"
+ decision_t_planet_building_slot_4_desc:0 ""
+ decision_t_planet_building_slot_5:0 "Expand Infrastructure: Level 5"
+ decision_t_planet_building_slot_5_desc:0 ""
+ 
+ decision_t_planet_population:0 "Assist Cloning"
+ decision_t_planet_population_desc:0 ""
+ decision_t_planet_aggressive_growth_policy:0 "Issue Aggressive Growth Policy"
+ decision_t_planet_aggressive_growth_policy_desc:0 ""
+ decision_t_planet_aggressive_growth_policy_remove:0 "Remove Aggressive Growth Policy"
+ decision_t_planet_aggressive_growth_policy_remove_desc:0 ""
+ 
+ decision_t_planet_frameworld_habitation:0 "Expand Habitation Space"
+ decision_t_planet_frameworld_habitation_desc:0 ""
+ 
+ # Districts
+ 
+ district_arcology_dimensional_processor:0 "Underground Arcology"
+ district_arcology_dimensional_processor_desc:0 "Underground arcology with many facilities providing huge amount of resources."
+ district_arcology_complex_research:0 "Research Arcology"
+ district_arcology_complex_research_dsec:0 "Complex research facilities."
+ district_arcology_archive:0 "Great Archives"
+ district_arcology_archive_desc:0 "Great archives containing most information about the galaxy."
+ 
+ district_t_utopian_arcology:0 "Utopian Arcology Nexus"
+ district_t_utopian_arcology_desc:0 "True utopia."
+ district_t_dimensional_fabricator:0 "Dimensional Macrofabricator"
+ district_t_dimensional_fabricator_desc:0 "The ultimate industry."
+ district_t_eternal_library:0 "Libraries of Infinity"
+ district_t_eternal_library_desc:0 "It is said that one can walk through these Libraries for years, and yet never grasp the true extent of knowledge that lies before him."
+ district_t_eternal_gardens:0 "Immaculate Gardens"
+ district_t_eternal_gardens_desc:0 ""
+ district_t_eternal_fortress:0 "Celestial Fortress"
+ district_t_eternal_fortress_desc:0 "The ultimate defence."
+ 
+ # Ascension Perks
+ 
+ ap_s_technological_ascension:0 "Technological Ascension"
+ ap_s_technological_ascension_desc:0 "Imagine a chlid charging at a soldier with a stick. If we become technologically superior to our enemies, they will not stand a chance against us. Ascension lies in technology."
+ ap_s_impenetrable_defense:0 "Impenetrable Defense"
+ ap_s_impenetrable_defense_desc:0 "The ultimate defense lies in starbases. If we fortify starbases well, we can make the best defense system in the galaxy, and thus be unconquered forever."
+ ap_s_great_fleet:0 "Great Fleets"
+ ap_s_great_fleet_desc:0 "The bigger our fleet is, the more of an advantage we have. If we are to dominate other galactic menaces, we have to become the strongest of them all. Magnificent fleets are the key to domination and victory."
+ ap_t_improved_defense:0 "Improved Defense"
+ ap_t_improved_defense_desc:0 "Improved defense."
+ 
+ tooltip_ap_s_technological_ascension:0 "Ascension lies in technology."
+ tooltip_ap_s_impenetrable_defense:0 "The ultimate defense lies in starbases. If we fortify starbases we can make the best defense system in the galaxy, and thus build an ultimate defense."
+ tooltip_ap_s_great_fleet:0 "Great fleets are the key to victories."
+ 
+ # Systems
+ 
+ ssb_b137_system_initializer_NAME:0 "B137 System"
+ ssb_b137_system_initializer_DESC:0 "Used for special events."
+ ssb_2ac7_system_initializer_NAME:0 "2AC7 System"
+ ssb_2ac7_system_initializer_DESC:0 "Used for special events."
+ ssb_w0-jpo_system_initializer_NAME:0 "W0-JPO"
+ ssb_w0-jpo_system_initializer_DESC:0 "Generates in the galaxy."
+ ssb_khutas_system_initializer_NAME:0 "KHUTAS"
+ ssb_khutas_system_initializer_DESC:0 "Generates in the galaxy."
+ 
+ # Planet Classes
+ 
+ pc_t_throne_of_eternity:0 "Celestial Ecumenopolis"
+ pc_t_throne_of_eternity_desc:0 "Ancient ecumenopolis powered by precursor technologies, superior to all other known arcology designs."
+ pc_gaiaarc:0 "Gaia Arcology"
+ pc_gaiaarc_desc:0 "World partially engulfed by urban-industrial sprawl and partially covered in perfectly adjusted ecosystems to make it suitable for all species. Parts of it's natural litosphere are no longer discernible from orbit."
+
+ t_frameworld_expansion:0 "Habitation Space Expansion"
+ 
+ # Situations
+ 
+ t_halls_of_power_situation:0 "Halls of Power"
+ t_halls_of_power_situation_desc:0 "Internal divisions and conflicting ideas within the government are represented here, as the Roman Halls of Power. You can focus your government on following various political ideas, each of them with their own pros and cons."
+ t_halls_of_power_situation_outcome:0 "If we follow the path of an idea for a long time, we may see large changes in our political landscape."
+ t_halls_of_power_situation_type:0 "Halls of Power"
+ 
+ t_halls_of_power_situation_approach_ecologism:0 "Ecologism"
+ t_halls_of_power_situation_approach_industrialism:0 "Industrialism"
+ t_halls_of_power_situation_approach_moderatism:0 "Moderatism"
+ t_halls_of_power_situation_approach_totalism:0 "Totalism"
+ 
+ 
+ 
+ t_emperor_health_situation:0 "The Sunset"
+ t_emperor_health_situation_desc:0 "The condition of our beloved Emperor is rapidly deteriorating."
+ t_emperor_health_situation_outcome:0 "Who knows what future holds?"
+ t_emperor_health_situation_type:0 "The Sunset"
+ 
+ t_emperor_health_situation_approach:0 "Install Life Support"

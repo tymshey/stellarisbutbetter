@@ -1,0 +1,23 @@
+t_the_eternal_cycle_init_edict = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = t_the_eternal_cycle_edict_category
+		cost = {
+			energy = 10
+		}
+	}
+
+	effect = {
+		country_event = { id = t_the_eternal_cycle.1 }
+	}
+
+	potential = {
+		has_origin = origin_the_eternal_cycle
+		NOT = { has_country_flag = t_the_eternal_cycle_event_flag }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

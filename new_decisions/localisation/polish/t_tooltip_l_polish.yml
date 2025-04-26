@@ -1,0 +1,8 @@
+﻿l_polish:
+ ####################################
+ # Tooltips
+ ####################################
+ 
+ t_frameworld_expand_concurrent:0 "The Frameworld is currently undergoing expansion."
+ t_allow_enigmatic_ecumenopolis:0 "Allows the construction of §HCelestial Ecumenopolis§!"
+ t_allow_enigmatic_ecumenopolis_desc:0 ""

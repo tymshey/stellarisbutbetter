@@ -1,0 +1,11 @@
+t_resolution_category_politics_standardization = {
+	group = politics_culture
+	icon = "GFX_resolution_supermajority"
+	multiple_active_resolutions = yes
+	resolution_types = {
+		"t_resolution_measurement_standardization_repeal"
+		"t_resolution_date_standardization_repeal"
+		"t_resolution_measurement_standardization"
+		"t_resolution_date_standardization"
+	}
+}

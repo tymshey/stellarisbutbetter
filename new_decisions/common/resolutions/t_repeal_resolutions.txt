@@ -1,0 +1,181 @@
+# Repeal resolutions
+
+# Made by tymshey
+
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
+@resolution_weight_popular = 6.5
+@resolution_weight_loved = 7
+
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_denounce = 25
+
+@resolution_flag_timer = 360
+
+
+t_resolution_imperial_embassies_repeal = {
+	icon = "GFX_repeal_red"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	effect = {
+		cancel_resolution = "t_resolution_imperial_embassies"
+	}
+
+	fail_effects = {
+		
+	}
+
+	potential = {
+		is_active_resolution = "t_resolution_imperial_embassies"
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = egalitarian
+				has_ethic = fanatic_egalitarian
+			}
+		}
+	}
+}
+
+t_resolution_imperial_work_standards_repeal = {
+	icon = "GFX_repeal_red"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	effect = {
+		cancel_resolution = "t_resolution_imperial_work_standards"
+	}
+
+	fail_effects = {
+		
+	}
+
+	potential = {
+		is_active_resolution = "t_resolution_imperial_work_standards"
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = xenophobe
+				has_ethic = fanatic_xenophobe
+			}
+		}
+	}
+}
+
+t_resolution_imperial_regulated_economic_growth_repeal = {
+	icon = "GFX_repeal_red"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	effect = {
+		cancel_resolution = "t_resolution_imperial_regulated_economic_growth"
+	}
+
+	fail_effects = {
+		
+	}
+
+	potential = {
+		is_active_resolution = "t_resolution_imperial_regulated_economic_growth"
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 5
+			has_authority = corporate
+		}
+	}
+}
+
+t_resolution_measurement_standardization_repeal = {
+	icon = "GFX_resolution_council_veto"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	effect = {
+		cancel_resolution = "t_resolution_measurement_standardization"
+	}
+
+	fail_effects = {
+		
+	}
+
+	potential = {
+		is_active_resolution = "t_resolution_measurement_standardization"
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+	}
+}
+
+t_resolution_date_standardization_repeal = {
+	icon = "GFX_resolution_council_veto"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	effect = {
+		cancel_resolution = "t_resolution_date_standardization"
+	}
+
+	fail_effects = {
+		
+	}
+
+	potential = {
+		is_active_resolution = "t_resolution_date_standardization"
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+	}
+}

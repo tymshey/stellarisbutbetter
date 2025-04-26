@@ -1,0 +1,28 @@
+﻿l_english:
+ ####################################
+ # Technology localisation
+ ####################################
+ 
+ # Enigmatic
+ 
+ t_tech_enigmatic_intro:0 "Enigmatic Power"
+ t_tech_enigmatic_intro_desc:0 "Untold might awaits us. §RAre we ready for it?§!"
+ 
+ t_tech_enigmatic_defence_systems:0 "Enigmatic Defence Systems"
+ t_tech_enigmatic_defence_systems_desc:0 ""
+ 
+ t_tech_enigmatic_infrastructure:0 "Enigmatic Infrastructure"
+ t_tech_enigmatic_infrastructure_desc:0 ""
+ t_allow_enigmatic_infrastructure:0 "§HUnlocks Planetary decision:§! Enigmatic Infrastructure Construction"
+ 
+ t_tech_enigmatic_dark_matter_generation:0 "Dark Matter Drawing"
+ t_tech_enigmatic_dark_matter_generation_desc:0 ""
+ 
+ t_tech_enigmatic_improved_dark_matter_generation:0 "Improved Dark Matter Drawing"
+ t_tech_enigmatic_improved_dark_matter_generation_desc:0 ""
+ 
+ t_tech_enigmatic_ecumenopolis:0 "Planetwide Enigmatic Construction"
+ t_tech_enigmatic_ecumenopolis_desc:0 "Allows the construction of §HCelestial Ecumenopolis§!"
+ 
+ t_tech_dimensional_alignment:0 "Dimensional Alignment"
+ t_tech_dimensional_alignment_desc:0 "Allows the construction of §HDimensional Alignment§!"

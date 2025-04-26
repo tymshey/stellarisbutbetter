@@ -1,0 +1,18 @@
+﻿l_english:
+ ####################################
+ # Traits
+ ####################################
+ 
+ ## Species traits
+ 
+ # Powerful/Special traits
+ 
+ t_trait_immortal:0 "Immortal"
+ t_trait_immortal_desc:0 "This species is unaffected by aging and thus lives forever."
+ 
+ ## Leader traits
+ 
+ # Powerful/Special traits
+ 
+ t_trait_leader_immortal:0 "The Eternal Leader"
+ t_trait_leader_immortal_desc:0 "This leader is an important figure for the society."

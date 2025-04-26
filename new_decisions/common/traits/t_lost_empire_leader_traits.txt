@@ -1,0 +1,21 @@
+# Leader traits
+
+t_trait_leader_immortal = {
+	inline_script = {
+		script = trait/icon
+		ICON = "gfx/interface/icons/traits/traits/t_trait_leader_immortal.dds"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	self_modifier = {
+		immortal_leaders = yes
+		species_leader_exp_gain = 0.5
+		all_technology_research_speed = 0.1
+	}
+
+	leader_class = { governor admiral scientist general }
+
+	initial = no
+	randomized = no
+}

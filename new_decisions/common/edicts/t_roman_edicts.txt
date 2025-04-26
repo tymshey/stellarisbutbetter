@@ -1,0 +1,142 @@
+@EdictPerpetual = -1
+
+t_roman_political_promises_edict = {
+	length = 3600
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = t_roman_edict_category
+		cost = {
+			energy = 100
+		}
+	}
+
+	effect = {
+		country_event = { id = t_roman_origin_events.2 }
+	}
+
+	potential = {
+		has_origin = origin_t_roman
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+t_roman_immortalize_leader_edict = {
+	length = 1
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = t_roman_edict_category
+		cost = {
+			energy = 1000
+		}
+	}
+
+	effect = {
+		set_country_flag = t_roman_ruler_immortal_flag
+		ruler = {
+			add_trait = leader_trait_the_apparatus_luminary
+		}
+	}
+
+	potential = {
+		has_origin = origin_t_roman
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+t_roman_production_edict = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = t_roman_edict_category
+		upkeep = {
+			unity = 50
+		}
+	}
+
+	modifier = {
+		planet_jobs_produces_mult = 0.15
+	}
+
+	potential = {
+		has_origin = origin_t_roman
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+t_roman_add_leaders_edict = {
+	length = 1
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = t_roman_edict_category
+		cost = {
+			energy = 10
+		}
+	}
+
+	effect = {
+		set_country_flag = t_has_roman_leaders
+		start_situation = {
+			type = t_halls_of_power_situation
+			target = root
+		}
+		create_leader = {
+			traits = {
+				trait = leader_trait_legendary_industry_titan_3
+				trait = leader_trait_architectural_interest_2
+				trait = leader_trait_intellectual_2
+			}
+			class = governor
+			species = ROOT
+			gender = male
+			skill = 5
+			set_age = 62
+			name = "Gaius Flavius Constantinus"
+			immortal = yes
+		}
+		create_leader = {
+			traits = {
+				trait = leader_trait_legendary_autarky_3
+				trait = leader_trait_legendary_great_inventor_2
+			}
+			class = governor
+			species = ROOT
+			gender = male
+			skill = 5
+			set_age = 59
+			name = "Lucius Iunius Cursor"
+			immortal = yes
+		}
+		create_leader = {
+			traits = {
+				trait = leader_trait_legendary_commanding_presence_2
+				trait = leader_trait_gale_speed_2
+				trait = leader_trait_aggressive
+			}
+			class = admiral
+			species = ROOT
+			gender = male
+			skill = 5
+			set_age = 58
+			name = "Volesius Fabius Verrucosus"
+			immortal = yes
+		}
+	}
+
+	potential = {
+		has_origin = origin_t_roman
+		NOT = { has_country_flag = t_has_roman_leaders }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

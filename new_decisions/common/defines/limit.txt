@@ -1,0 +1,6 @@
+
+	NGameplay = {
+		
+		COMMAND_LIMIT_MAX										= 99999	
+		COMMAND_LIMIT_BASE										= 90000
+	}

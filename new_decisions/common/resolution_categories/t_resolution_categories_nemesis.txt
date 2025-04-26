@@ -1,0 +1,15 @@
+# Added by tymshey
+
+t_resolution_category_emperor_internal_politics = {
+	group = galactic_empire
+	icon = "GFX_resolution_imperial_institutions"
+	multiple_active_resolutions = yes
+	resolution_types = {
+		"t_resolution_imperial_embassies_repeal"
+		"t_resolution_imperial_work_standards_repeal"
+		"t_resolution_imperial_regulated_economic_growth_repeal"
+		"t_resolution_imperial_embassies"
+		"t_resolution_imperial_work_standards"
+		"t_resolution_imperial_regulated_economic_growth"
+	}
+}

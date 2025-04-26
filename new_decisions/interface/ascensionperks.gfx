@@ -1,0 +1,20 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_s_technological_ascension"
+		textureFile = "gfx//interface//icons//ascension_perks//ap_s_technological_ascension.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_s_impenetrable_defense"
+		textureFile = "gfx//interface//icons//ascension_perks//ap_s_impenetrable_defense.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_s_great_fleets"
+		textureFile = "gfx//interface//icons//ascension_perks//ap_s_great_fleets.dds"
+	}
+}

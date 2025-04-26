@@ -1,0 +1,103 @@
+# KHUTAS system
+
+@distance = 50
+@base_moon_distance = 10
+
+ssb_khutas_system_initializer = {
+	name = "KHUTAS"
+	class = "sc_k"
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 185
+	}
+	
+	usage = misc_system_init
+	usage_odds = {
+		base = 2000000
+	}
+	max_instances = 1
+
+	planet = {
+		name = "KHUTAS"
+		class = "pc_k_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+	
+
+	planet = {
+		name = "KHUTAS-1"
+		class = "pc_shattered"
+		orbit_distance = 75
+		orbit_angle = { min = 90 max = 270 }
+		size = 14
+		has_ring = no
+	}
+	planet = {
+		name = "KHUTAS-2"
+		class = "pc_shattered"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 15
+		has_ring = yes
+		change_orbit = 5
+	}
+	planet = {
+		name = "KHUTAS-3"
+		class = "pc_gaia"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 18
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		name = "X1-KHUTAS"
+		class = "pc_asteroid"
+		orbit_distance = 40
+		orbit_angle = { min = 90 max = 270 }
+		size = 4
+		has_ring = no
+	}
+	planet = {
+		name = "KHUTAS-4"
+		class = "pc_frozen"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 30
+		has_ring = yes
+		change_orbit = 5
+	}
+	planet = {
+		name = "KHUTAS-5"
+		class = "pc_barren"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 12
+		has_ring = no
+		change_orbit = 5
+	}
+	planet = {
+		name = "KHUTAS-6"
+		class = "pc_barren"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 12
+		has_ring = no
+		change_orbit = 5
+	}
+	planet = {
+		name = "KHUTAS-7"
+		class = "pc_frozen"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 10
+		has_ring = no
+		change_orbit = 5
+	}
+
+}

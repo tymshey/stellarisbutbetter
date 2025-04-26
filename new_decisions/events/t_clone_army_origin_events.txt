@@ -1,0 +1,23 @@
+# clone army origin recieves a size 30 capital world
+
+namespace = t_clone_army_origin_events
+
+# Introduction event (hidden)
+country_event = {
+	id = t_clone_army_origin_events.1
+	hide_window = yes
+	
+	trigger = {
+		has_origin = origin_clone_army
+		NOT = {
+			has_country_flag = t_origin_clone_army_startup_flag
+		}
+	}
+
+ 	immediate = {
+ 		set_country_flag = t_origin_clone_army_startup_flag
+		capital_scope = {
+			set_planet_size = 30
+		}
+ 	}
+}

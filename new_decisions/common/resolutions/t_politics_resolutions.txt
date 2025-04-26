@@ -1,0 +1,121 @@
+# Example Resolution Type
+# NOTE: Remember to add Resolutions to a Resolution Category!
+
+#example_resolution = {
+#	icon = "name of the icon key"
+#	resources = {} # cost and category
+#	target = yes/no # if this resolution requires a target country
+#	modifier = {} # modifier to be applied to all community members if passed
+#	effect = {} # effect to be applied if passed, scope is proposer unless there is a target country - then scope is target country, with proposer in from scope
+#	fail_effects = {} # effect to be applied if failed, scope is proposer unless there is a target country - then scope is target country, with proposer in from scope
+#	potential = {} # potential trigger, scope is country
+#	allow = {} # allow trigger, scope is country, from is target if valid
+#	active = {} # can be active trigger, scope is country
+#	breach = {} # in breach trigger, scope is country
+#	valid_target = {} # valid target trigger, scope is country
+#	ai_weight = {} # ai weight modifiers, scope is country
+#}
+
+# Made by tymshey
+
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
+@resolution_weight_popular = 6.5
+@resolution_weight_loved = 7
+
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_denounce = 25
+
+@resolution_flag_timer = 360
+
+t_resolution_measurement_standardization = {
+	icon = "GFX_resolution_supermajority"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = 200
+		}
+	}
+	target = no
+
+	modifier = {
+		t_resolution_measurement_standardization = 1
+	}
+
+	effect = {
+	}
+
+	fail_effects = {
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOT = { is_active_resolution = "t_resolution_measurement_standardization" }
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_popular
+		
+		modifier = {
+			factor = 5
+			has_ai_personality = federation_builders
+		}
+
+		modifier = {
+			factor = 4
+			is_galactic_emperor = yes
+		}
+	}
+}
+
+t_resolution_date_standardization = {
+	icon = "GFX_resolution_supermajority"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = 200
+		}
+	}
+	target = no
+
+	modifier = {
+		t_resolution_date_standardization = 1
+	}
+
+	effect = {
+	}
+
+	fail_effects = {
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOT = { is_active_resolution = "t_resolution_date_standardization" }
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_popular
+		
+		modifier = {
+			factor = 5
+			has_ai_personality = federation_builders
+		}
+
+		modifier = {
+			factor = 4
+			is_galactic_emperor = yes
+		}
+	}
+}

@@ -1,0 +1,15 @@
+song = {
+	name = "Verify Your Clock"
+}
+song = {
+	name = "Burgundian Lullaby"
+}
+song = {
+	name = "Backroom Deal"
+}
+song = {
+	name = "Minutes To Midnight"
+}
+song = {
+	name = "Silicon Dreams"
+}

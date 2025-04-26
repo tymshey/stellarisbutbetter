@@ -1,0 +1,94 @@
+decision_t_planet_population = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_divine_algorithm
+	
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			food = 3500
+		}
+	}
+
+	allow = {
+		NOT = { has_modifier = t_planet_population_growth_modifier }
+	}
+
+	effect = {
+		add_modifier = { modifier = "t_planet_population_growth_modifier" days = 360 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		
+	}
+}
+
+decision_t_planet_aggressive_growth_policy = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_divine_algorithm
+	
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 100
+		}
+	}
+
+	allow = {
+		NOT = { has_modifier = t_planet_aggressive_growth_policy_modifier }
+	}
+
+	effect = {
+		add_modifier = { modifier = "t_planet_aggressive_growth_policy_modifier" days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_gaiaarc
+			is_planet_class = pc_t_throne_of_eternity
+		}
+	}
+}
+
+decision_t_planet_aggressive_growth_policy_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_divine_algorithm
+	
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 100
+		}
+	}
+
+	allow = {
+		has_modifier = t_planet_aggressive_growth_policy_modifier
+	}
+
+	effect = {
+		remove_modifier = t_planet_aggressive_growth_policy_modifier
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		has_modifier = t_planet_aggressive_growth_policy_modifier
+	}
+}

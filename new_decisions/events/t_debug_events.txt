@@ -1,0 +1,68 @@
+# Debug Events
+
+namespace = t_debug_events
+
+country_event = { # Add Halls of Power
+	id = t_debug_events.1
+	title = t_debug_events.1.name
+ 	desc = t_debug_events.1.desc
+ 	picture = GFX_evt_galactic_senate
+ 	show_sound = event_laboratory_sound
+ 	location = root
+	
+	is_triggered_only = yes
+
+ 	immediate = {
+		
+ 	}
+	
+	option = {
+ 		name = t_debug_events.1.a
+		set_country_flag = t_has_roman_leaders
+		start_situation = {
+			type = t_halls_of_power_situation
+			target = root
+		}
+		create_leader = {
+			traits = {
+				trait = leader_trait_legendary_industry_titan_3
+				trait = leader_trait_architectural_interest_2
+				trait = leader_trait_intellectual_2
+			}
+			class = governor
+			species = ROOT
+			gender = male
+			skill = 5
+			set_age = 62
+			name = "Gaius Flavius Constantinus"
+			immortal = yes
+		}
+		create_leader = {
+			traits = {
+				trait = leader_trait_legendary_autarky_3
+				trait = leader_trait_legendary_great_inventor_2
+			}
+			class = governor
+			species = ROOT
+			gender = male
+			skill = 5
+			set_age = 59
+			name = "Lucius Iunius Cursor"
+			immortal = yes
+		}
+		create_leader = {
+			traits = {
+				trait = leader_trait_legendary_commanding_presence_2
+				trait = leader_trait_gale_speed_2
+				trait = leader_trait_aggressive
+			}
+			class = admiral
+			species = ROOT
+			gender = male
+			skill = 5
+			set_age = 58
+			name = "Volesius Fabius Verrucosus"
+			immortal = yes
+		}
+ 	}
+}

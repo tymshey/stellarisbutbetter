@@ -1,0 +1,117 @@
+# Events for "Dream of the Empire" origin
+
+namespace = t_roman_origin_events
+
+# Introduction event (hidden)
+country_event = {
+	id = t_roman_origin_events.1
+	hide_window = yes
+	
+	trigger = {
+		has_origin = origin_t_roman
+		NOT = {
+			has_country_flag = t_roman_origin_event_flag
+		}
+	}
+
+ 	immediate = {
+ 		set_country_flag = t_roman_origin_event_flag
+		# add_relic = r_t_ancient_data_cache
+		# add_relic = r_t_ancient_crystal_archive
+		capital_scope = {
+			add_modifier = {
+				modifier = t_roman_origin_modifier
+				days = -1
+			}
+		}
+		ruler = {
+			set_age = 72
+		}
+ 	}
+}
+
+country_event = { # Political Promises
+	id = t_roman_origin_events.2
+	title = t_roman_origin_events.2.name
+ 	desc = t_roman_origin_events.2.desc
+ 	picture = GFX_evt_galactic_senate
+ 	show_sound = event_laboratory_sound
+ 	location = root
+	
+	is_triggered_only = yes
+
+ 	immediate = {
+		
+ 	}
+	
+	option = {
+ 		name = t_roman_origin_events.2.a
+		add_resource = {
+			influence = 100
+			unity = 100
+		}
+ 	}
+}
+
+country_event = { # Callistus' health deteriorates
+	id = t_roman_origin_events.3
+	title = t_roman_origin_events.3.name
+ 	desc = t_roman_origin_events.3.desc
+ 	picture = GFX_evt_galactic_senate
+ 	show_sound = event_laboratory_sound
+ 	location = root
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_origin = origin_t_roman
+		years_passed >= 5
+		NOT = {
+			has_country_flag = t_roman_ruler_immortal_flag
+			has_country_flag = t_roman_callistus_health_1_flag
+		}
+	}
+
+ 	immediate = {
+		
+ 	}
+	
+	option = {
+ 		name = t_roman_origin_events.3.a
+		set_country_flag = t_roman_callistus_health_1_flag
+		custom_tooltip = t_roman_origin_events_3_tooltip
+		start_situation = {
+			type = t_emperor_health_situation
+			target = root
+		}
+ 	}
+}
+
+country_event = { # Callistus dies
+	id = t_roman_origin_events.4
+	title = t_roman_origin_events.4.name
+ 	desc = t_roman_origin_events.4.desc
+ 	picture = GFX_evt_galactic_senate
+ 	show_sound = event_laboratory_sound
+ 	location = root
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+ 	immediate = {
+		
+ 	}
+	
+	option = {
+ 		name = t_roman_origin_events.4.a
+		set_country_flag = t_roman_callistus_died_flag
+		ruler = {
+			kill_leader = yes
+		}
+		change_government = {
+			authority = auth_oligarchic
+		}
+		destroy_situation = t_emperor_health_situation
+ 	}
+}

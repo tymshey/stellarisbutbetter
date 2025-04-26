@@ -1,0 +1,100 @@
+# Ascension Perks
+
+ap_s_technological_ascension = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_s_technological_ascension
+		}
+	}
+
+	possible = {
+		num_ascension_perks > 3
+	}
+
+	on_enabled = {
+		
+	}
+
+	modifier = {
+		all_technology_research_speed = 0.15
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}
+
+ap_s_impenetrable_defense = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_s_impenetrable_defense
+		}
+	}
+
+	possible = {
+		num_ascension_perks > 4
+	}
+
+	on_enabled = {
+		
+	}
+
+	modifier = {
+		shipclass_starbase_hull_mult = 0.1
+		shipclass_military_station_damage_mult = 0.1
+		starbase_defense_platform_capacity_add = 40
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+ap_s_great_fleet = {
+	potential = {
+		always = no # chuj
+		NOT = {
+			has_ascension_perk = ap_s_great_fleet
+		}
+	}
+
+	possible = {
+		num_ascension_perks > 1
+	}
+
+	on_enabled = {
+		
+	}
+
+	modifier = {
+		ship_weapon_damage = 0.15
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 4
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}

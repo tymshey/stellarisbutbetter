@@ -1,0 +1,43 @@
+# Events for Frameworld origin
+
+namespace = t_frameworld
+
+# Introduction event (hidden)
+country_event = {
+	id = t_frameworld.1
+	hide_window = yes
+	
+	trigger = {
+		has_origin = origin_frameworld
+		NOT = {
+			has_country_flag = t_frameworld_origin_flag
+		}
+	}
+
+ 	immediate = {
+ 		set_country_flag = t_frameworld_origin_flag
+		add_relic = r_t_ancient_data_cache
+		if = {
+			limit = {
+				owner = { is_machine_empire = yes }
+			}
+			capital_scope = {
+				add_modifier = {
+					modifier = t_frameworld_origin_modifier
+					days = -1
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { is_regular_empire = yes }
+			}
+			capital_scope = {
+				add_modifier = {
+					modifier = t_frameworld_origin_modifier_individual
+					days = -1
+				}
+			}
+		}
+ 	}
+}

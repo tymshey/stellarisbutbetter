@@ -1,0 +1,20 @@
+namespace = t_machine_emperor_events
+
+# Introduction event
+country_event = {
+	id = t_machine_emperor_events.1
+	hide_window = yes
+ 	location = root
+	
+	fire_only_once = yes
+
+ 	trigger = {
+		has_valid_civic = civic_t_machine_emperor
+	}
+
+ 	immediate = {
+ 		ruler = {
+			add_trait = leader_trait_the_synth_luminary
+		}
+ 	}
+}

@@ -1,0 +1,166 @@
+decision_planet_underground_districts = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+	
+	enactment_time = 720
+	
+		resources = {
+		category = decisions
+		cost = {
+			alloys = 70000
+			rare_crystals = 1000
+			energy = 5000
+			minerals = 5000
+		}
+	}
+
+	allow = {
+		NOT = { has_modifier = planet_underground_district_boost }
+	}
+
+	effect = {
+		add_modifier = { modifier = "planet_underground_district_boost" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		owner = {
+			OR = {
+				has_origin = origin_the_lost_empire
+				has_origin = origin_the_eternal_cycle
+				has_origin = origin_t_roman
+			}
+		}
+	}
+}
+
+decision_planet_multidimensional_habitation = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_planet_beam
+	
+	enactment_time = 720
+	
+		resources = {
+			category = decisions
+			cost = {
+				alloys = 45000
+				rare_crystals = 10000
+				energy = 100000
+				minerals = 10000
+				exotic_gases = 10000
+				dark_matter = 10000
+			}
+		}
+	
+	allow = {
+		NOT = { has_modifier = planet_multidimensional_habitation_boost }
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_gaiaarc
+		}
+	}
+	
+	effect = {
+		add_modifier = { modifier = "planet_multidimensional_habitation_boost" days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		owner = {
+			OR = {
+				has_origin = origin_the_lost_empire
+				has_origin = origin_the_eternal_cycle
+				has_origin = origin_t_roman
+			}
+		}
+	}
+}
+
+t_decision_planet_enigmatic_infrastructure = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+	
+	enactment_time = 720
+	
+		resources = {
+			category = decisions
+			cost = {
+				alloys = 2000
+				energy = 10000
+				minerals = 10000
+			}
+		}
+	
+	allow = {
+		NOT = { has_modifier = t_planet_enigmatic_infrastructure }
+	}
+	
+	effect = {
+		add_modifier = { modifier = "t_planet_enigmatic_infrastructure" days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		owner = {
+			owner = {
+				has_technology = t_tech_enigmatic_infrastructure
+			}
+			OR = {
+				has_origin = origin_the_lost_empire
+				has_origin = origin_the_eternal_cycle
+				has_origin = origin_t_roman
+			}
+		}
+	}
+}
+
+decision_planet_build_gaia_arcology = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+	
+	enactment_time = 720
+	
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 5000
+			rare_crystals = 500
+			exotic_gases = 500
+			food = 7500
+			energy = 10000
+			minerals = 5500
+		}
+	}
+
+	allow = {
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_gaia
+		}
+	}
+
+	effect = {
+		change_pc = pc_gaiaarc
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		owner = { has_ascension_perk = ap_arcology_project }
+	}
+}

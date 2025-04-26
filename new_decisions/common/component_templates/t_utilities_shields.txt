@@ -1,0 +1,105 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#############
+# UTILITIES #
+#############
+
+# Enigmatic Shielding
+utility_component_template = {
+	key = "SMALL_ENIGMATIC_SHIELDING"
+	size = small
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+	power = @power_S6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_s_t6_cost
+			sr_dark_matter = 0.25
+		}
+		upkeep = {
+			energy = @shield_s_t6_upkeep_energy
+			alloys = @shield_s_t6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = 300
+		ship_shield_regen_add_static = 7.5 #Regeneration per day
+	}
+	prerequisites = { "t_tech_enigmatic_defence_systems" }
+	component_set = "ENIGMATIC_SHIELDING"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_ENIGMATIC_SHIELDING"
+	size = medium
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+	power = @power_M6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_m_t6_cost
+			sr_dark_matter = 0.5
+		}
+		upkeep = {
+			energy = @shield_m_t6_upkeep_energy
+			alloys = @shield_m_t6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = 700
+		ship_shield_regen_add_static = 15 #Regeneration per day
+	}
+	prerequisites = { "t_tech_enigmatic_defence_systems" }
+	component_set = "ENIGMATIC_SHIELDING"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_ENIGMATIC_SHIELDING"
+	size = large
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+	power = @power_L6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_l_t6_cost
+			sr_dark_matter = 1
+		}
+		upkeep = {
+			energy = @shield_l_t6_upkeep_energy
+			alloys = @shield_l_t6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = 2000
+		ship_shield_regen_add_static = 50 #Regeneration per day
+	}
+	prerequisites = { "t_tech_enigmatic_defence_systems" }
+	component_set = "ENIGMATIC_SHIELDING"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}

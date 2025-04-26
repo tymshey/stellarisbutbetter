@@ -1,0 +1,13 @@
+﻿l_english:
+ ####################################
+ # Tooltips
+ ####################################
+ 
+ t_frameworld_expand_concurrent:0 "The Frameworld is currently undergoing expansion."
+ t_allow_enigmatic_ecumenopolis:0 "Allows the construction of §HCelestial Ecumenopolis§!"
+ t_allow_enigmatic_ecumenopolis_desc:0 ""
+ t_allow_dimensional_alignment:0 "Allows the construction of §HDimensional Alignment§!"
+ t_roman_origin_modifier_tt:0 "§RLosing this world would severly cripple this empire.§!"
+ t_decision_dimensional_alignment_tt:0 "The §HDimensional Alignment§! uses the §RMaginot world§! mechanics.\n\nWe can only support §Rone§! §HDimensional Alignment§! per empire."
+ t_system_shield_tt:0 "The Stellar Shielding is capable of stopping hyperspace manipulations, preventing the usage of jump drives or FTLs that dynamically create hyperlanes."
+ civic_t_machine_emperor_tt:0 "Leader recieves the Synthetic Awareness trait."

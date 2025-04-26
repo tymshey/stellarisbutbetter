@@ -1,0 +1,13 @@
+﻿l_polish:
+ ####################################
+ # Relics
+ ####################################
+ 
+ r_t_ancient_data_cache:0 "Ancient Data Cache"
+ r_t_ancient_data_cache_desc:0 "Who knows what mysteries about the past lay inside..."
+ t_relic_ancient_data_cache_boost:0 "Ancient Data Cache"
+ t_relic_ancient_data_cache_boost_desc:0 ""
+ 
+ r_t_ancient_crystal_archive:0 "Ancient Crystal Archive"
+ r_t_ancient_crystal_archive_desc:0 ""
+ t_relic_crystal_archive_active:0 "Create §Y20§! Minor Artifacts"

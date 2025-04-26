@@ -1,0 +1,27 @@
+civic_t_ancient_protectors = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		origin = {
+			OR = {
+				value = origin_the_lost_empire
+				value = origin_the_eternal_cycle
+			}
+		}
+	}
+	modification = no
+	random_weight = { base = 0 }
+	modifier = {
+		country_edict_cap_add = 1
+		pop_ethic_authoritarian_attraction_mult = 0.1
+		damage_vs_country_type_swarm_mult = 0.2
+		damage_vs_country_type_extradimensional_mult = 0.2
+		damage_vs_country_type_extradimensional_2_mult = 0.2
+		damage_vs_country_type_extradimensional_3_mult = 0.2
+		damage_vs_country_type_ai_empire_mult = 0.2
+		damage_vs_country_type_gray_goo_mult = 0.2
+		damage_vs_player_crisis_mult = 0.2
+	}
+}

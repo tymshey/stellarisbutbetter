@@ -1,0 +1,11 @@
+﻿l_english:
+ ####################################
+ # Building localisation
+ ####################################
+ 
+ # Enigmatic
+ 
+ t_building_dark_matter_generator:0 "Dark Matter Generator"
+ t_building_dark_matter_generator_desc:0 ""
+ t_building_dark_matter_generator_2:0 "Improved Dark Matter Generator"
+ t_building_dark_matter_generator_2_desc:0 ""

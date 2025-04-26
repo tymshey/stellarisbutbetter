@@ -1,0 +1,16 @@
+t_dimensional_alignment_reactor = {
+	is_for_colonizable = yes
+	icon = d_station_reactor
+	category = deposit_cat_rare
+	use_for_min_max_adjustments = yes
+  
+	drop_weight = { weight = 0 }
+	potential = { always = yes }
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 5000
+		}
+	}
+}

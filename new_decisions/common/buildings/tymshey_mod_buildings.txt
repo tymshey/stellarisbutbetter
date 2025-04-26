@@ -1,0 +1,75 @@
+t_building_dark_matter_generator = {
+	base_buildtime = 600
+	can_demolish = yes
+	can_be_disabled = yes
+
+	category = manufacturing
+	
+	potential = {
+	}
+	
+	allow = {
+		is_planet_class = pc_t_throne_of_eternity
+		is_planet_class = pc_t_dimensional_alignment
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 850
+			alloys = 100
+		}
+		produces = {
+			sr_dark_matter = 7
+		}
+		upkeep = {
+			energy = 30
+		}
+	}
+	
+	prerequisites = {
+		"t_tech_enigmatic_dark_matter_generation"
+	}
+
+	upgrades = {
+		t_building_dark_matter_generator_2
+	}
+}
+
+t_building_dark_matter_generator_2 = {
+	base_buildtime = 600
+	can_demolish = yes
+	can_be_disabled = yes
+
+	category = manufacturing
+	
+	potential = {
+	}
+	
+	allow = {
+		is_planet_class = pc_t_throne_of_eternity
+		is_planet_class = pc_t_dimensional_alignment
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 850
+			alloys = 100
+		}
+		produces = {
+			sr_dark_matter = 15
+		}
+		upkeep = {
+			energy = 40
+		}
+	}
+	
+	prerequisites = {
+		"t_tech_enigmatic_improved_dark_matter_generation"
+	}
+
+	upgrades = {
+		
+	}
+}

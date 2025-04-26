@@ -1,0 +1,209 @@
+# Enigmatic tier techs
+
+# Made by tymshey
+
+t_tech_enigmatic_intro = { # Enigmatic energy discovery
+	area = physics
+	category = { particles }
+	tier = 5
+	is_rare = yes
+	is_dangerous = yes
+	cost = 75000
+	prerequisites = {  }
+	weight = @tier5weight1
+
+	# unlocks enigmatic techs
+	
+	modifier = {
+		all_technology_research_speed = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+t_tech_enigmatic_defence_systems = { # Enigmatic energy first use
+	area = physics
+	category = { field_manipulation }
+	tier = 5
+	is_rare = yes
+	cost = 75000
+	prerequisites = { t_tech_enigmatic_intro  }
+	weight = @tier5weight1
+
+	# unlocks enigmatic shielding
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+t_tech_enigmatic_infrastructure = { # Enigmatic Infrastracture
+	area = engineering
+	category = { industry }
+	tier = 5
+	is_rare = yes
+	cost = 75000
+	prerequisites = { t_tech_enigmatic_intro  }
+	weight = @tier5weight1
+
+	# unlocks enigmatic infrastructure decision
+	
+	prereqfor_desc = {
+		ship = {
+			title = "t_allow_enigmatic_infrastructure"
+			desc = ""
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+t_tech_enigmatic_dark_matter_generation = { # generator tech
+	area = physics
+	category = { field_manipulation }
+	tier = 5
+	is_rare = yes
+	cost = 75000
+	prerequisites = { t_tech_enigmatic_intro  }
+	weight = @tier5weight1
+
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+t_tech_enigmatic_improved_dark_matter_generation = { # better generator tech
+	area = physics
+	category = { field_manipulation }
+	tier = 5
+	is_rare = yes
+	cost = 100000
+	prerequisites = { t_tech_enigmatic_dark_matter_generation  }
+	weight = @tier5weight1
+
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+t_tech_enigmatic_ecumenopolis = { # Enigmatic Ecumenopolis
+	area = engineering
+	category = { voidcraft }
+	tier = 5
+	is_rare = yes
+	cost = 350000
+	prerequisites = { t_tech_enigmatic_infrastructure  }
+	weight = @tier5weight1
+
+	# unlocks strong ecumenopolis
+	
+	prereqfor_desc = {
+		ship = {
+			title = "t_allow_enigmatic_ecumenopolis"
+			desc = ""
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+t_tech_dimensional_alignment = { # Dimensional Alignment
+	area = engineering
+	category = { voidcraft }
+	tier = 5
+	is_rare = yes
+	cost = 400000
+	prerequisites = { t_tech_enigmatic_ecumenopolis  }
+	weight = @tier5weight1
+
+	# unlocks strong ecumenopolis
+	
+	prereqfor_desc = {
+		ship = {
+			title = "t_allow_dimensional_alignment"
+			desc = ""
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}

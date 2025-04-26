@@ -1,0 +1,76 @@
+# W0-JPO system
+
+@distance = 50
+@base_moon_distance = 10
+
+ssb_w0-jpo_system_initializer = {
+	name = "W0-JPO"
+	class = "sc_b"
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 185
+	}
+	
+	usage = misc_system_init
+	usage_odds = {
+		base = 2000000
+	}
+	max_instances = 1
+
+	planet = {
+		name = "W0-JPO"
+		class = "pc_b_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+	
+
+	planet = {
+		name = "W1"
+		class = "pc_molten"
+		orbit_distance = 75
+		orbit_angle = { min = 90 max = 270 }
+		size = 14
+		has_ring = no
+	}
+	planet = {
+		name = "Ug'r'd"
+		class = "pc_shattered"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		has_ring = yes
+		change_orbit = 5
+	}
+	planet = {
+		name = "Asur"
+		class = "pc_relic"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 22
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		name = "X1-W0-JPO"
+		class = "pc_asteroid"
+		orbit_distance = 40
+		orbit_angle = { min = 90 max = 270 }
+		size = 4
+		has_ring = no
+	}
+	planet = {
+		name = "W4"
+		class = "pc_frozen"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 24
+		has_ring = yes
+		change_orbit = 5
+	}
+
+}

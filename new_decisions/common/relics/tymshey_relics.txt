@@ -1,0 +1,105 @@
+@activation_cost = 150
+@triumph_duration = 3600
+@triumph_duration_short = 1800
+@triumph_duration_veryshort = 900
+
+r_t_ancient_data_cache = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_omnicodex"
+	sound = "relic_activation_ether_drake_trophy"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			influence = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		all_technology_research_speed = 0.2
+		science_ship_survey_speed = 0.2
+	}
+
+	score = 1500
+
+	active_effect = {
+		add_modifier = {
+			modifier = "t_relic_ancient_data_cache_boost"
+			days = @triumph_duration
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+
+r_t_ancient_crystal_archive = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_zro_crystal"
+	sound = "relic_activation_ether_drake_trophy"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			influence = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_growth_speed = 0.1
+		planet_jobs_produces_mult = 0.1
+		damage_vs_country_type_extradimensional_mult = 0.2
+		damage_vs_country_type_extradimensional_2_mult = 0.2
+		damage_vs_country_type_extradimensional_3_mult = 0.2
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = t_relic_crystal_archive_active
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			add_resource = { minor_artifacts = 20 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}

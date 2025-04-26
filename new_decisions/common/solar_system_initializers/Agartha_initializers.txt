@@ -1,0 +1,223 @@
+@distance = 50
+@base_moon_distance = 10
+
+ssb_agartha_system_initializer = {
+	name = "Agartha"
+	class = "sc_trinary_2"
+	usage = custom_empire
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Agartha"
+		class = "pc_b_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	
+		planet = {
+			name = "Vulcanus"
+			class = "pc_molten"
+			orbit_distance = 75
+			orbit_angle = { min = 90 max = 270 }
+			size = 14
+			has_ring = no
+		}
+		planet = {
+			name = "Juno"
+			class = "pc_barren"
+			orbit_distance = 35
+			orbit_angle = { min = 90 max = 270 }
+			size = 16
+			has_ring = yes
+			change_orbit = 5
+		}
+		planet = {
+			class = "pc_continental"
+			orbit_distance = 35
+			orbit_angle = { min = 90 max = 270 }
+			size = 22
+			has_ring = no
+			change_orbit = 5
+			home_planet = yes
+		}
+		planet = {
+			name = "Janus"
+			class = "pc_barren"
+			orbit_distance = 35
+			orbit_angle = { min = 90 max = 270 }
+			size = 22
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			moon = {
+				name = "Castor"
+				class = "pc_barren"
+				orbit_distance = 12
+				orbit_angle = { min = 90 max = 270 }
+				size = 5
+			}
+			moon = {
+				name = "Pollux"
+				class = "pc_barren"
+				orbit_distance = 12
+				orbit_angle = { min = 90 max = 270 }
+				size = 5
+			}
+		}
+		planet = {
+			name = "Quirinus"
+			class = "pc_gas_giant"
+			orbit_distance = 35
+			orbit_angle = { min = 90 max = 270 }
+			size = 30
+			has_ring = yes
+			change_orbit = 5
+			moon = {
+				name = "Cincinnatus"
+				class = "pc_barren_cold"
+				orbit_distance = 10
+				orbit_angle = 90
+				size = 12
+			}
+			moon = {
+				name = "Camillus"
+				class = "pc_barren_cold"
+				orbit_distance = 10
+				orbit_angle = 120
+				size = 8
+			}
+			moon = {
+				name = "Collatinus"
+				class = "pc_barren_cold"
+				orbit_distance = 10
+				orbit_angle = 200
+				size = 8
+			}
+		}
+		planet = {
+			name = "Aurelianus"
+			class = "pc_gas_giant"
+			orbit_distance = 35
+			orbit_angle = { min = 90 max = 270 }
+			size = 26
+			has_ring = yes
+			change_orbit = 5
+			moon = {
+				name = "Adeodatus"
+				class = "pc_barren_cold"
+				orbit_distance = 10
+				orbit_angle = 70
+				size = 8
+			}
+		}
+	}
+	
+	planet = {
+		name = "Agartha"
+		class = pc_a_star
+		size = 20
+		orbit_distance = 400
+		orbit_angle = 90
+		satellite_naming_policy = upper_case_roman_numerals
+		
+		planet = {
+			name = "Cunctator"
+			class = "pc_molten"
+			orbit_distance = 35
+			orbit_angle = { min = 90 max = 270 }
+			size = 18
+			has_ring = no
+		}
+		
+		planet = {
+			name = "Scipio"
+			class = "pc_barren"
+			orbit_distance = 35
+			orbit_angle = { min = 90 max = 270 }
+			size = 20
+			has_ring = no
+			change_orbit = 5
+		}
+		
+		planet = {
+			name = "Julius"
+			class = "pc_barren"
+			orbit_distance = 60
+			orbit_angle = { min = 90 max = 270 }
+			size = 22
+			has_ring = no
+			change_orbit = 5
+			moon = {
+				name = "Primus"
+				class = "pc_barren"
+				orbit_distance = 12
+				orbit_angle = { min = 90 max = 270 }
+				size = 10
+			}
+			moon = {
+				name = "Postumus"
+				class = "pc_barren"
+				orbit_distance = 12
+				orbit_angle = { min = 90 max = 270 }
+				size = 8
+			}
+		}
+	}
+	
+	planet = {
+		name = "Olympus"
+        class = pc_g_star
+        size = { min = 20 max = 25 }
+        orbit_distance = 0
+        orbit_angle = { min = 90 max = 270 }
+        satellite_naming_policy = upper_case_roman_numerals
+
+		planet = {
+			name = "Rhegium"
+			class = "pc_molten"
+			orbit_distance = 35
+			orbit_angle = { min = 90 max = 270 }
+			size = 18
+			has_ring = no
+		}
+        planet = {
+			name = "Tellus"
+			class = "pc_barren"
+			orbit_distance = 35
+			orbit_angle = { min = 90 max = 270 }
+			size = 20
+			has_ring = yes
+			change_orbit = 5
+			moon = {
+				name = "Diana"
+				class = "pc_barren_cold"
+				orbit_distance = 10
+				orbit_angle = { min = 90 max = 270 }
+				size = 5
+			}
+		}
+    }
+	
+	neighbor_system = {
+		hyperlane_jumps = { min = 1 max = 1 }
+		initializer = "t_deneb_system"
+	}
+	neighbor_system = {
+		hyperlane_jumps = { min = 1 max = 1 }
+		initializer = "t_altair_system"
+	}
+	neighbor_system = {
+		hyperlane_jumps = { min = 1 max = 1 }
+		initializer = "t_aurelius_system"
+	}
+}

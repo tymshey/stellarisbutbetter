@@ -1,0 +1,132 @@
+entity = {
+	name = "pc_t_gaiaarc_01_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
+	name = "planet_geosphereShape"
+	shader = "PdxMeshPlanetEmissive"
+		texture_diffuse = "gaiaarc_01_diffuse.dds"
+		texture_normal = "gaiaarc_01_normal.dds"
+		texture_specular = "gaiaarc_01_specular.dds"
+	}
+	
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+	
+	attach = { planet = "city_planet_surface_ships_entity" }
+}
+
+################# CITY MAN #################
+
+entity = {
+	name = "pc_acot_enigmopolis_01_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	attach = { planet = "acot_city_planet_surface_ships_entity" }
+	locator = { name = "root2" rotation = { 45 0 180 } }
+	#attach = { planet = "pc_acot_enigmopolis_dummy_entity" } # IS NOW ITS OWN THING
+	attach = { root2 = "acot_city_planet_surface_ships_x2_entity" }
+
+	meshsettings = {
+	name = "planet_geosphereShape"
+	shader = "PdxMeshPlanetEmissive"
+		texture_diffuse = "acot_enigmopolis_01_diffuse.dds"
+		texture_normal = "city_planet_avian_01_normal.dds"
+		texture_specular = "city_planet_avian_01_specular.dds"
+	}
+	
+
+	default_state = "idle"
+	playback_rate = 1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+	}
+}
+
+entity = {
+	name = "pc_acot_enigmopolis_dummy_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	scale = 0.98
+
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	locator = { name = "root2" rotation = { 0 0 180 } }
+	locator = { name = "top_pylon" position = { 0 7 0 } rotation = { 0 0 180 } }
+	locator = { name = "bottom_pylon" position = { 0 -7 0 } rotation = { 0 0 0 } }
+	locator = { name = "top_ring" position = { 0 6 0 } rotation = { 90 0 0 } }
+	locator = { name = "bottom_ring" position = { 0 -6 0 } rotation = { 90 0 180 } }
+
+	attach = { root = "pc_acot_enigmopolis_ring_entity" }
+	attach = { root2 = "pc_acot_enigmopolis_ring_entity" }
+	attach = { top_pylon = "pc_acot_enigmopolis_pylon_entity" }
+	attach = { bottom_pylon = "pc_acot_enigmopolis_pylon_entity" }
+	attach = { top_pylon = "pc_acot_enigmopolis_microring_entity" }
+	attach = { bottom_pylon = "pc_acot_enigmopolis_microring_entity" }
+	attach = { top_ring = "pc_acot_enigmopolis_medring_entity" }
+	attach = { bottom_ring = "pc_acot_enigmopolis_medring_entity" }
+
+	meshsettings = {
+	name = "planet_geosphereShape"
+	shader = "PdxMeshPlanetEmissive"
+		texture_diffuse = "acot_enigmopolis_01_diffuse.dds"
+		texture_normal = "city_planet_avian_01_normal.dds"
+		texture_specular = "city_planet_avian_01_specular.dds"
+	}
+	
+
+	default_state = "idle"
+	playback_rate = 1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+	}
+}
+
+entity = {
+	name = "acot_city_planet_surface_ships_entity"
+	pdxmesh = "city_planet_surface_ships_mesh"
+	
+	get_state_from_parent = no
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" 
+		start_event = { node = "ship_locator_1" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_2" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_3" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_4" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_5" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_6" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_7" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_8" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+	}
+	
+	playback_rate = 5.0 # Rotation is reversed
+
+	scale = 1
+	
+}
+
+entity = {
+	name = "acot_city_planet_surface_ships_x2_entity"
+	pdxmesh = "city_planet_surface_ships_mesh"
+	
+	get_state_from_parent = no
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" 
+		start_event = { node = "ship_locator_1" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_2" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_3" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_4" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_5" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_6" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_7" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { node = "ship_locator_8" particle = "small_acot_plasma_cannon_ae_idle_particle" keep_particle = yes trigger_once = yes }
+	}
+	
+	playback_rate = 2.5 # Rotation is reversed
+
+	scale = 0.95
+	
+}

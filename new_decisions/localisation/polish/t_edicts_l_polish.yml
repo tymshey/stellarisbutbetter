@@ -1,0 +1,18 @@
+﻿l_polish:
+ ####################################
+ # Edicts
+ ####################################
+ 
+ edict_t_the_lost_empire_init_edict:0 "The Lost Empire"
+ edict_t_the_lost_empire_init_edict_desc:0 ""
+ 
+ # Roman Edicts
+ 
+ edict_t_roman_political_promises_edict:0 "Political Promises"
+ edict_t_roman_political_promises_edict_desc:0 "Promise peace and prosperity to our citizens. However it is left for us to decide whether to keep this promise or not."
+ edict_t_roman_immortalize_leader_edict:0 "Install Life Support Apparatus"
+ edict_t_roman_immortalize_leader_edict_desc:0 ""
+ edict_t_roman_production_edict:0 "Production Overdrive"
+ edict_t_roman_production_edict_desc:0 ""
+ edict_t_roman_add_leaders_edict:0 "Assign Leadership"
+ edict_t_roman_add_leaders_edict_desc:0 ""

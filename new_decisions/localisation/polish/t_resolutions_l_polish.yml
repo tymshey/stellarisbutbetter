@@ -1,0 +1,32 @@
+﻿l_polish:
+ ####################################
+ # Resolution localisation
+ ####################################
+ 
+ # Resolution categories
+ t_resolution_category_emperor_internal_politics:0 "Internal Politics"
+ t_resolution_category_politics_standardization:0 "Galactic Standardization"
+ 
+ # Resolutions
+ t_resolution_imperial_embassies:0 "Imperial Embassies"
+ t_resolution_imperial_embassies_desc:0 "By establishing a system of embassies, we will be able to govern the empire much more efficiently than before."
+ t_resolution_imperial_work_standards:0 "Imperial Work Standards"
+ t_resolution_imperial_work_standards_desc:0 "Labor standards are necessary to maintain order and prosperity in the galaxy."
+ t_resolution_imperial_regulated_economic_growth:0 "Regulated Economic Growth"
+ t_resolution_imperial_regulated_economic_growth_desc:0 "Regulation of economic growth is necessary to prevent the exploitation of workers and the emergence of monopolies on the galactic market."
+ t_resolution_measurement_standardization:0 "Measurment Standardization"
+ t_resolution_measurement_standardization_desc:0 "Measurment standardization is an important step towards achieving prosperity."
+ t_resolution_date_standardization:0 "Date Standardization"
+ t_resolution_date_standardization_desc:0 "Date standardization is an important step towards achieving prosperity."
+ 
+ # Repeals
+ t_resolution_imperial_embassies_repeal:0 "Repeal Imperial Embassies"
+ t_resolution_imperial_embassies_repeal_desc:0 ""
+ t_resolution_imperial_work_standards_repeal:0 "Repeal Imperial Work Standards"
+ t_resolution_imperial_work_standards_repeal_desc:0 ""
+ t_resolution_imperial_regulated_economic_growth_repeal:0 "Repeal Regulated Economic Growth"
+ t_resolution_imperial_regulated_economic_growth_repeal_desc:0 ""
+ t_resolution_measurement_standardization_repeal:0 "Repeal Measurment Standardization"
+ t_resolution_measurement_standardization_repeal_desc:0 ""
+ t_resolution_date_standardization_repeal:0 "Date Standardization Repeal"
+ t_resolution_date_standardization_repeal_desc:0 ""

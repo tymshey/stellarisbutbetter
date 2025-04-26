@@ -1,0 +1,44 @@
+decision_t_planet_frameworld_habitation = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_divine_algorithm
+	
+	enactment_time = 120
+	
+	potential = {
+		owner = {
+			has_origin = origin_frameworld
+		}
+		is_planet_class = pc_giga_frameworld
+	}
+	
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 1000
+			minerals = 5000
+		}
+	}
+	
+	allow = {
+		custom_tooltip_fail = {
+			text = t_frameworld_expand_concurrent
+			not = { has_planet_flag = t_frameworld_expand_queued }
+		}
+	}
+
+	effect = {
+		add_deposit = t_frameworld_expansion
+	}
+	
+	#on_queued = {
+	#	set_planet_flag = t_frameworld_expand_queued
+	#}
+	#on_unqueued = {
+	#	remove_planet_flag = t_frameworld_expand_queued
+	#}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

@@ -1,0 +1,18 @@
+# Traits
+
+t_trait_immortal = {
+	cost = 0
+	opposites = { }
+	initial = no
+	allowed_archetypes = { BIOLOGIAL }
+	modification = no
+	immortal_leaders = yes
+	valid_for_all_ethics = yes
+	sapient = yes
+	modifier = {
+		
+	}
+	slave_cost = {
+		energy = 250
+	}
+}

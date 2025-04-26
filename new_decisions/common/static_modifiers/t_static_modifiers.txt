@@ -1,0 +1,147 @@
+# Modifiers
+
+### Origin modifiers
+
+t_roman_origin_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_capital.dds"
+	icon_frame = 1
+	planet_max_districts_add = 10
+	planet_max_buildings_add = 20
+	pop_growth_speed = 0.15
+	job_clerk_per_pop = 0.1
+	job_culture_worker_per_pop = 0.1
+	job_enforcer_per_pop = 0.1
+	show_only_custom_tooltip = no
+	custom_tooltip = t_roman_origin_modifier_tt
+}
+
+t_frameworld_origin_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_capital.dds"
+	icon_frame = 1
+	planet_max_districts_add = 10
+	planet_max_buildings_add = 30
+	planet_pop_assembly_mult = 0.1
+	# planet_jobs_engineering_research_produces_mult = 0.15
+	job_replicator_add = 3
+	job_replicator_per_pop = 0.025
+	job_patrol_drone_per_pop = 0.1
+	job_calculator_per_pop = 0.1
+}
+
+t_frameworld_origin_modifier_individual = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_capital.dds"
+	icon_frame = 1
+	planet_max_districts_add = 10
+	planet_max_buildings_add = 30
+	planet_pop_assembly_mult = 0.1
+	# planet_jobs_engineering_research_produces_mult = 0.15
+	job_roboticist_add = 3
+	job_roboticist_per_pop = 0.025
+	job_enforcer_per_pop = 0.1
+	job_researcher_per_pop = 0.1
+}
+
+t_ancient_home_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_pm_consecrated_worlds.dds"
+	icon_frame = 1
+	planet_jobs_physics_research_produces_mult = 0.3
+	planet_jobs_society_research_produces_mult = 0.3
+	planet_jobs_engineering_research_produces_mult = 0.3
+}
+
+###
+
+planet_underground_district_boost = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_capital.dds"
+	icon_frame = 1
+	# planet_amenities_mult = 0.25
+	planet_max_districts_add = 20
+	planet_jobs_physics_research_produces_mult = 0.1
+	planet_jobs_engineering_research_produces_mult = 0.1
+	planet_jobs_society_research_produces_mult = 0.1
+}
+
+planet_multidimensional_habitation_boost = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_pm_consecrated_worlds.dds"
+	icon_frame = 1
+	# planet_amenities_mult = 0.25
+	planet_max_districts_add = 25
+	planet_jobs_physics_research_produces_mult = 0.2
+	planet_jobs_society_research_produces_mult = 0.2
+	planet_jobs_engineering_research_produces_mult = 0.2
+}
+
+t_planet_enigmatic_infrastructure = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_capital.dds"
+	icon_frame = 1
+	planet_max_districts_add = 20
+	planet_pops_sr_dark_matter_upkeep_mult = -0.1
+}
+
+# infrastructure
+
+t_planet_building_slot_boost_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_capital.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.025
+	planet_max_districts_add = 2
+	planet_max_buildings_add = 10
+}
+
+t_planet_building_slot_boost_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_capital.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.05
+	planet_max_districts_add = 3
+	planet_max_buildings_add = 20
+}
+
+t_planet_building_slot_boost_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_capital.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.075
+	planet_max_districts_add = 4
+	planet_max_buildings_add = 30
+}
+
+t_planet_building_slot_boost_4 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_capital.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.1
+	planet_max_districts_add = 5
+	planet_max_buildings_add = 40
+}
+
+t_planet_building_slot_boost_5 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_capital.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.15
+	planet_max_districts_add = 6
+	planet_max_buildings_add = 50
+}
+
+# growth
+
+t_planet_population_growth_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
+	icon_frame = 1
+	planet_pop_assembly_organic_mult = 0.5
+}
+
+t_planet_aggressive_growth_policy_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
+	icon_frame = 2
+	pop_growth_speed = 0.5
+	planet_pops_consumer_goods_upkeep_mult = 0.25
+	planet_crime_mult = 0.25
+}
+
+# shield
+
+t_system_shield = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_pm_consecrated_worlds.dds"
+	icon_frame = 1
+	ship_shield_mult = 0.15
+	show_only_custom_tooltip = no
+	custom_tooltip = t_system_shield_tt
+}

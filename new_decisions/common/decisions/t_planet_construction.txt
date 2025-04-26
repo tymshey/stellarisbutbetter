@@ -1,0 +1,91 @@
+t_decision_planet_build_enigmatic_ecumenopolis = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = t_decision_enigmatic_arcology
+	
+	enactment_time = 720
+	
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 5000
+			rare_crystals = 500
+			exotic_gases = 500
+			food = 7500
+			energy = 10000
+			minerals = 5500
+		}
+	}
+
+	allow = {
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_gaiaarc
+		}
+	}
+
+	effect = {
+		change_pc = pc_t_throne_of_eternity
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		owner = {
+			has_ascension_perk = ap_arcology_project
+			has_technology = t_tech_enigmatic_ecumenopolis
+		}
+	}
+}
+
+t_decision_planet_build_dimensional_alignment = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = t_decision_enigmatic_arcology
+	
+	enactment_time = 720
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 200000
+			alloys = 50000
+			rare_crystals = 5000
+			sr_dark_matter = 20000
+		}
+	}
+
+	allow = {
+		is_planet_class = pc_t_throne_of_eternity
+		NOT = {
+			has_country_flag = t_dimensional_alignment_built
+		}
+	}
+
+	effect = {
+		change_pc = pc_t_dimensional_alignment
+		set_planet_size = 50
+		add_deposit = t_dimensional_alignment_reactor
+		set_planet_flag = giga_maginot_world
+		owner = {
+			set_country_flag = t_dimensional_alignment_built
+		}
+		show_only_custom_tooltip = no
+		custom_tooltip = t_decision_dimensional_alignment_tt
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		owner = {
+			has_technology = t_tech_dimensional_alignment
+			NOT = {
+				has_country_flag = t_dimensional_alignment_built
+			}
+		}
+	}
+}

@@ -1,0 +1,162 @@
+decision_t_planet_building_slot_1 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+	
+	enactment_time = 30
+	
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 1000
+		}
+	}
+
+	allow = {
+		NOT = { has_modifier = t_planet_building_slot_boost_1 }
+	}
+
+	effect = {
+		add_modifier = { modifier = "t_planet_building_slot_boost_1" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		NOT = { has_modifier = t_planet_building_slot_boost_1 }
+		NOT = { has_modifier = t_planet_building_slot_boost_2 }
+		NOT = { has_modifier = t_planet_building_slot_boost_3 }
+		NOT = { has_modifier = t_planet_building_slot_boost_4 }
+		NOT = { has_modifier = t_planet_building_slot_boost_5 }
+	}
+}
+
+decision_t_planet_building_slot_2 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+	
+	enactment_time = 30
+	
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 2500
+		}
+	}
+
+	allow = {
+		NOT = { has_modifier = t_planet_building_slot_boost_2 }
+	}
+
+	effect = {
+		remove_modifier = t_planet_building_slot_boost_1
+		add_modifier = { modifier = "t_planet_building_slot_boost_2" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		has_modifier = t_planet_building_slot_boost_1
+	}
+}
+
+decision_t_planet_building_slot_3 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+	
+	enactment_time = 30
+	
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 5000
+		}
+	}
+
+	allow = {
+		NOT = { has_modifier = t_planet_building_slot_boost_3 }
+	}
+
+	effect = {
+		remove_modifier = t_planet_building_slot_boost_2
+		add_modifier = { modifier = "t_planet_building_slot_boost_3" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		has_modifier = t_planet_building_slot_boost_2
+	}
+}
+
+decision_t_planet_building_slot_4 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+	
+	enactment_time = 30
+	
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 7500
+		}
+	}
+
+	allow = {
+		NOT = { has_modifier = t_planet_building_slot_boost_4 }
+	}
+
+	effect = {
+		remove_modifier = t_planet_building_slot_boost_3
+		add_modifier = { modifier = "t_planet_building_slot_boost_4" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		has_modifier = t_planet_building_slot_boost_3
+	}
+}
+
+decision_t_planet_building_slot_5 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+	
+	enactment_time = 30
+	
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 7500
+		}
+	}
+
+	allow = {
+		NOT = { has_modifier = t_planet_building_slot_boost_5 }
+	}
+
+	effect = {
+		remove_modifier = t_planet_building_slot_boost_4
+		add_modifier = { modifier = "t_planet_building_slot_boost_5" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	
+	potential = {
+		has_modifier = t_planet_building_slot_boost_4
+	}
+}

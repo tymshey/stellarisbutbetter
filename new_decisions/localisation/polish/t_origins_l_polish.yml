@@ -1,0 +1,14 @@
+﻿l_polish:
+ ####################################
+ # Origins
+ ####################################
+
+ origin_the_lost_empire:0 "The Lost Empire"
+ origin_the_lost_empire_desc:0 "This civilization first rose to the stars long ago. They had once ruled the galaxy and protected it from various extragalactic threads. However centuries of internal problems and lack of stability among the population led to the eventual defeat of the powerful protectors. After years of destitution they are returning to the stars to reclaim their glory and power."
+ origin_tooltip_the_lost_empire_effects:0 "Start with a §YRelic World§! as your homeworld and a special unique relic. Reclaim your lost glory! §PRemember to enact "The Lost Empire" edict at the beginning of the game§!"
+ origin_the_eternal_cycle:0 "The Eternal Cycle"
+ origin_the_eternal_cycle_desc:0 "Since the dawn of the galaxy, this powerful empire existed locked in an eternal cycle of rising to the stars, achieving mastery over the galaxy, to eventually fall to their homeworld. After a few hundred years of destitution they would once again rise up to regain and rediscover all that was lost, continuing the cycle. §RWill you become powerful enough, to break the cycle?§!"
+ origin_tooltip_the_eternal_cycle_effects:0 "Start with a §YCelestial Ecumenopolis§! as your homeworld and two special unique relics. Reclaim your lost glory! §PTHIS IS DEFINETLY NOT BALANCED. DON'T USE THIS IF YOU WANT TO PLAY A BALANCED CAMPAIGN.§!"
+ origin_t_roman:0 "Dream of the Empire"
+ origin_t_roman_desc:0 "The new order has dawned upon Terra. The former nations of the Earth were either absorbed into Rome, or obliterated in the Magnum Bellum Universale. However, stability of the new regime will not last long. Dictator Callistus Victor is at en end of his time. When he is gone, an inevitable civil war will erupt between the three most powerful politicians of the age. §GThe Republican - Lucius Iunius Cursor,§! who wants to restore the old republic, §YThe Monarchist - Gaius Flavius Constantinus,§! who wants to restore the empire and §RThe Totalitarian - Volesius Fabius Verrucosus,§! who wants to continue the dictatorship. Upon the outcome of the upcoming conflict lies the fate of Rome."
+ origin_tooltip_t_roman_effect:0 "Start with a bigger population on the homeworld. Gain access to unique mechanics, relics, edicts, decisions and events. Carry the legacy of Rome to the stars! §PSelecting this origin will trigger Roman storyline events.§!"

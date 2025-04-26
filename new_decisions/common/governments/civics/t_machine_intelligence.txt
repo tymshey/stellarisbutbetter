@@ -1,0 +1,23 @@
+civic_t_engineering_protocols = {
+	potential = {
+		authority = { value = auth_machine_intelligence }
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		megastructure_build_speed_mult = 0.3
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_t_machine_emperor = {
+	potential = {
+		species_archetype = { value = MACHINE }
+	}
+	random_weight = { base = 0 }
+	modification = no
+	description = civic_t_machine_emperor_tt
+	modifier = {
+		country_unity_produces_mult = 0.1
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}

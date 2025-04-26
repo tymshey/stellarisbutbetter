@@ -1,0 +1,29 @@
+# Events for "The Lost Empire" origin
+
+namespace = t_the_lost_empire
+
+# Introduction event
+country_event = {
+	id = t_the_lost_empire.1
+	title = t_the_lost_empire.1.name
+ 	desc = t_the_lost_empire.1.desc
+ 	picture = GFX_evt_robot_assembly_plant
+ 	show_sound = event_laboratory_sound
+ 	location = root
+
+ 	is_triggered_only = yes
+
+ 	immediate = {
+ 		set_country_flag = t_the_lost_empire_event_flag
+ 	}
+
+ 	option = {
+ 		name = t_the_lost_empire.1.a
+		ruler = {
+			add_trait = leader_trait_the_apparatus_luminary
+		}
+		add_relic = r_t_ancient_data_cache
+		give_technology = { tech = tech_dark_matter_power_core message = yes }
+		give_technology = { tech = tech_dark_matter_propulsion message = yes }
+ 	}
+}

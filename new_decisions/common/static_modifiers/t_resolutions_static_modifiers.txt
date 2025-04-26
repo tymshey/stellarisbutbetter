@@ -1,0 +1,29 @@
+# Resolution modifiers
+
+t_resolution_imperial_embassies = {
+	diplo_weight_envoys_mult = 0.15
+	diplo_weight_council_mult = 0.25
+	planet_stability_add = 5
+}
+
+t_resolution_imperial_work_standards = {
+	planet_jobs_produces_mult = 0.10
+	planet_jobs_upkeep_mult = -0.10
+	pop_cat_worker_political_power = 0.1
+}
+
+t_resolution_imperial_regulated_economic_growth = {
+	planet_jobs_produces_mult = 0.05
+	trade_value_mult = -0.05
+}
+
+t_resolution_measurement_standardization = {
+	planet_jobs_produces_mult = 0.05
+	planet_jobs_upkeep_mult = -0.10
+	trade_value_mult = 0.05
+	country_trade_fee = 0.05
+}
+
+t_resolution_date_standardization = {
+	country_admin_cap_mult = 0.1
+}

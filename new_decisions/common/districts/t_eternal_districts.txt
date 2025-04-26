@@ -1,0 +1,510 @@
+district_t_utopian_arcology = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+
+	show_on_uncolonized = {
+		uses_district_set = t_eternal_world
+	}
+
+	potential = {
+		uses_district_set = t_eternal_world
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+	}
+	
+	# Resources
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 10000
+			alloys = 2500
+			exotic_gases = 100
+		}
+		upkeep = {
+			energy = 15
+			acot_sr_dark_energy = 15
+			sr_dark_matter = 15
+		}
+	}
+	
+	# Modifier
+
+	planet_modifier = {
+		planet_housing_add = 20
+		planet_amenities_add = 10
+		trade_value_add = 10
+	}
+	
+	# ACOT Jobs
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_acot_overlord_add = 1
+			job_acot_overseer_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_acot_overlord_drone_add = 1
+			job_acot_overseer_drone_add = 2
+		}
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_acot_overlord_droid_add = 1
+			job_acot_overseer_droid_add = 2
+		}
+	}
+	
+	# Regular Jobs
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 5
+		}
+	}
+	
+	# Housing
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_non_swapped_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 5
+		}
+	}
+	
+	# Jobs
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_clerk_add = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_non_swapped_tradition = tr_prosperity_interstellar_franchising }
+		}
+		modifier = {
+			job_clerk_add = 10
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_regular_empire = yes
+			}
+		}
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+	
+	# AI
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			free_housing < 10
+		}
+	}
+}
+
+district_t_dimensional_fabricator = {
+base_buildtime = 600
+	is_capped_by_modifier = no
+
+	show_on_uncolonized = {
+		uses_district_set = t_eternal_world
+	}
+
+	potential = {
+		uses_district_set = t_eternal_world
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_artisan_add = 10
+			job_foundry_add = 10
+			job_mote_harvester_add = 1
+			job_crystal_miner_add = 1
+			job_extractor_add = 1
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_artisan_drone_add = 10
+			job_mote_harvester_drone_add = 1
+			job_crystal_mining_drone_add = 1
+			job_gas_extraction_drone_add = 1
+		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_arcology_housing
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 10000
+			alloys = 2500
+			exotic_gases = 50
+			rare_crystals = 100
+		}
+		upkeep = {
+			energy = 50
+			acot_sr_dark_energy = 5
+			sr_dark_matter = 5
+		}
+		produces = {
+			food = 100
+			minerals = 100
+			consumer_goods = 50
+			energy = 100
+			rare_crystals = 10
+			exotic_gases = 10
+			volatile_motes = 10
+			alloys = 10
+			sr_zro = 5
+			sr_living_metal = 5
+			acot_sr_dark_energy = 10
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+district_t_eternal_library = {
+base_buildtime = 600
+	is_capped_by_modifier = no
+
+	show_on_uncolonized = {
+		uses_district_set = t_eternal_world
+	}
+
+	potential = {
+		uses_district_set = t_eternal_world
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_researcher_add = 10
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_calculator_add = 10
+		}
+	}
+	
+	# ACOT Jobs
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_acot_voidsphere_labman_add = 2
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_acot_voidsphere_labdrone_add = 2
+		}
+	}	
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_arcology_housing
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 10000
+			rare_crystals = 100
+			alloys = 2500
+		}
+		upkeep = {
+			energy = 50
+			acot_sr_dark_energy = 5
+			sr_dark_matter = 5
+		}
+		produces = {
+			unity = 50
+			society_research = 200
+			physics_research = 200
+			engineering_research = 200
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 8
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+district_t_eternal_gardens = {
+base_buildtime = 600
+	is_capped_by_modifier = no
+
+	show_on_uncolonized = {
+		uses_district_set = t_eternal_world
+	}
+
+	potential = {
+		uses_district_set = t_eternal_world
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_arcology_housing
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 10000
+			rare_crystals = 100
+			alloys = 2500
+		}
+		upkeep = {
+			energy = 15
+			acot_sr_dark_energy = 2
+			sr_dark_matter = 2
+		}
+		produces = {
+			unity = 50
+			consumer_goods = 50
+			food = 50
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 8
+		planet_amenities_add = 50
+	}
+	
+	triggered_planet_modifier = {
+		potential = { 
+			owner = { is_gestalt = no }
+		}
+		job_farmer_add = 5
+		job_healthcare_add = 1
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+district_t_eternal_fortress = {
+	base_buildtime = 360
+	is_capped_by_modifier = no
+	
+	show_on_uncolonized = {
+		uses_district_set = t_eternal_world
+	}
+
+	allow = {
+	}
+
+	potential = {
+		uses_district_set = t_eternal_world
+	}
+
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 10000
+			alloys = 2500
+		}
+		produces = {
+			unity = 250
+		}
+		upkeep = {
+			acot_sr_dark_energy = 10
+			sr_dark_matter = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5
+		planet_stability_add = 20
+	}
+	
+	# ACOT Jobs
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { 
+				is_gestalt = no 
+			}
+		}
+		modifier = {
+			job_acot_enforcer_add = 4
+			job_enforcer_add = 7
+			job_soldier_add = 7
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { 
+				is_gestalt = yes 
+			}
+		}
+		modifier = {
+			job_acot_enforcer_drone_add = 4
+			job_patrol_drone_add = 7
+			job_warrior_drone_add = 7
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { 
+			owner = { is_gestalt = no }
+		}
+		job_acot_giga_fortress_operator_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = { 
+			owner = { is_gestalt = yes }
+		}
+		job_acot_giga_fortress_operator_drone_add = 1
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			free_housing < 10
+		}
+	}
+}
