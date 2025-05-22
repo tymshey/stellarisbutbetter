@@ -1,0 +1,36 @@
+objectTypes = {
+	pdxparticle = {
+		name = "original_empire_gateway_portal_effect"
+		type = "original_empire_gateway_portal_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "original_empire_planet_shield_effect"
+		type = "original_empire_planet_shield_effect"
+		
+		scale = 14.00
+	}
+	
+	pdxparticle = {
+		name = "t_energy_core_original_effect"
+		type = "t_energy_core_original_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "t_ship_light_original_effect"
+		type = "t_ship_light_original_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "t_ship_large_light_original_effect"
+		type = "t_ship_light_original_effect"
+		
+		scale = 2.0
+	}
+}

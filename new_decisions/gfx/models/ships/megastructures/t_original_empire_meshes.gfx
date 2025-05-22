@@ -1,0 +1,75 @@
+objectTypes = {
+	#Original Empire
+	
+	pdxmesh = {
+		name = "t_original_empire_warship_large_mesh"
+		file = "gfx/models/ships/fallen_empire_01/fallen_empire_large_warship.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "finished_MeshShape"
+			index = 0
+			texture_diffuse = "t_original_empire_large_warship_diffuse.dds"
+			texture_normal = "t_original_empire_large_warship_normal.dds"
+			texture_specular = "t_original_empire_large_warship_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+	
+	pdxmesh = {
+		name = "t_original_empire_warship_small_mesh"
+		file = "gfx/models/ships/fallen_empire_01/fallen_empire_small_warship.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "MeshShape"
+			index = 0
+			texture_diffuse = "t_original_empire_small_warship_diffuse.dds"
+			texture_normal = "t_original_empire_small_warship_normal.dds"
+			texture_specular = "t_original_empire_small_warship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "t_original_empire_colossus_frame_mesh"
+		file = "gfx/models/ships/colossus/fallen_empire_01/fallen_empire_01_colossus_frame.mesh"
+		
+		animation = { id = "idle"			type = "fallen_empire_01_colossus_frame_idle_animation" }
+		animation = { id = "closed_death"	type = "fallen_empire_01_colossus_frame_closed_death_animation" }
+		animation = { id = "opened_death"	type = "fallen_empire_01_colossus_frame_opened_death_animation" }
+	}
+	
+	
+	pdxmesh = {
+		name = "t_original_empire_colossus_mesh"
+		file = "gfx/models/ships/colossus/fallen_empire_01/fallen_empire_01_colossus.mesh"
+		
+		animation = { id = "idle"			type = "fallen_empire_01_colossus_idle_animation" }
+		animation = { id = "open"			type = "fallen_empire_01_colossus_open_animation" }
+		animation = { id = "opening"		type = "fallen_empire_01_colossus_opening_animation" }
+		animation = { id = "closing"		type = "fallen_empire_01_colossus_closing_animation" }
+		animation = { id = "opened_death"	type = "fallen_empire_01_colossus_opened_death_animation" }
+		
+	meshsettings = {
+			index = 0
+			texture_diffuse = "t_original_empire_colossus_diffuse.dds"
+			texture_normal = "t_original_empire_colossus_normal.dds"
+			texture_specular = "t_original_empire_colossus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+		
+	pdxmesh = {
+		name = "t_original_empire_colossus_energy_mesh"
+		file = "gfx/models/ships/colossus/fallen_empire_01/fallen_empire_01_colossus_energy.mesh"
+		
+		animation = { id = "idle"			type = "fallen_empire_01_colossus_energy_idle_animation" }
+		
+		meshsettings = {
+			texture_diffuse = "fallen_empire_02_colossus_energy.dds"
+		}
+		
+	}
+}

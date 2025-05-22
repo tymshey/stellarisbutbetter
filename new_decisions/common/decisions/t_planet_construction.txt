@@ -57,6 +57,15 @@ t_decision_planet_build_dimensional_alignment = {
 		}
 	}
 
+	potential = {
+		owner = {
+			has_technology = t_tech_dimensional_alignment
+			NOT = {
+				has_country_flag = t_dimensional_alignment_built
+			}
+		}
+	}
+
 	allow = {
 		is_planet_class = pc_t_throne_of_eternity
 		NOT = {
@@ -79,13 +88,102 @@ t_decision_planet_build_dimensional_alignment = {
 	ai_weight = {
 		weight = 0
 	}
+}
+
+t_decision_planet_build_dimensional_alignment_uncolonized = { # used for the frameworld
+	# owned_planets_only = no
+	sound = event_administrative_work
+	icon = t_decision_enigmatic_arcology
 	
+	enactment_time = 0
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 200000
+			alloys = 50000
+			rare_crystals = 5000
+			sr_dark_matter = 20000
+		}
+	}
+
 	potential = {
-		owner = {
+		has_origin = origin_frameworld
+		is_planet_class = pc_t_throne_of_eternity
+	}
+
+	allow = {
+		is_planet_class = pc_t_throne_of_eternity
+		space_owner = {
 			has_technology = t_tech_dimensional_alignment
 			NOT = {
 				has_country_flag = t_dimensional_alignment_built
 			}
 		}
+	}
+
+	effect = {
+		change_pc = pc_t_dimensional_alignment
+		set_planet_size = 50
+		add_deposit = t_dimensional_alignment_reactor
+		set_planet_flag = giga_maginot_world
+		space_owner = {
+			set_country_flag = t_dimensional_alignment_built
+		}
+		show_only_custom_tooltip = no
+		custom_tooltip = t_decision_dimensional_alignment_tt
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+t_decision_planet_build_frame_alignment = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = t_decision_enigmatic_arcology
+	
+	enactment_time = 720
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000000 # 10^6
+			alloys = 100000 # 10^5
+			rare_crystals = 20000
+			sr_dark_matter = 30000
+		}
+	}
+
+	potential = {
+		owner = {
+			has_technology = t_tech_dimensional_alignment
+			NOT = {
+				has_country_flag = t_frame_alignment_built
+			}
+		}
+	}
+
+	allow = {
+		is_planet_class = pc_t_dimensional_alignment
+		NOT = {
+			has_country_flag = t_frame_alignment_built
+		}
+	}
+
+	effect = {
+		change_pc = pc_t_frame_alignment
+		set_planet_size = 75
+		set_planet_flag = giga_maginot_world
+		owner = {
+			set_country_flag = t_frame_alignment_built
+		}
+		show_only_custom_tooltip = no
+		custom_tooltip = t_decision_frame_alignment_tt
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }

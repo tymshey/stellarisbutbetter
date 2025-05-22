@@ -1,10 +1,13 @@
 t_decision_planet_activate_system_shield = {
-	owned_planets_only = yes
+	# owned_planets_only = no
 	sound = event_administrative_work
 	icon = decision_divine_algorithm
 
 	allow = {
-		is_planet_class = pc_t_dimensional_alignment
+		OR = {
+			is_planet_class = pc_t_dimensional_alignment
+			is_planet_class = pc_t_frame_alignment
+		}
 		NOT = {
 			has_modifier = t_system_shield
 		}
@@ -27,12 +30,15 @@ t_decision_planet_activate_system_shield = {
 	}
 	
 	potential = {
-		is_planet_class = pc_t_dimensional_alignment
+		OR = {
+			is_planet_class = pc_t_dimensional_alignment
+			is_planet_class = pc_t_frame_alignment
+		}
 	}
 }
 
 t_decision_planet_deactivate_system_shield = {
-	owned_planets_only = yes
+	# owned_planets_only = no
 	sound = event_administrative_work
 	icon = decision_divine_algorithm
 

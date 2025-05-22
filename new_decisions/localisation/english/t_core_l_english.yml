@@ -43,6 +43,10 @@
  t_decision_planet_build_enigmatic_ecumenopolis_desc:0 ""
  t_decision_planet_build_dimensional_alignment:0 "Construct Dimensional Alignment"
  t_decision_planet_build_dimensional_alignment_desc:0 ""
+ t_decision_planet_build_dimensional_alignment_uncolonized:0 "Construct Dimensional Alignment"
+ t_decision_planet_build_dimensional_alignment_uncolonized_desc:0 ""
+ t_decision_planet_build_frame_alignment:0 "Expand the Alignment"
+ t_decision_planet_build_frame_alignment_desc:0 ""
  
  decision_t_planet_building_slot_1:0 "Expand Infrastructure: Level 1"
  decision_t_planet_building_slot_1_desc:0 ""
@@ -81,14 +85,22 @@
  
  district_t_utopian_arcology:0 "Utopian Arcology Nexus"
  district_t_utopian_arcology_desc:0 "True utopia."
+ district_t_utopian_arcology_plural:0 "Utopian Arcology Nexus"
  district_t_dimensional_fabricator:0 "Dimensional Macrofabricator"
  district_t_dimensional_fabricator_desc:0 "The ultimate industry."
+ district_t_dimensional_fabricator_plural:0 "Dimensional Macrofabricators"
  district_t_eternal_library:0 "Libraries of Infinity"
  district_t_eternal_library_desc:0 "It is said that one can walk through these Libraries for years, and yet never grasp the true extent of knowledge that lies before him."
+ district_t_eternal_library_plural:0 "Libraries of Infinity"
+ district_t_eternal_computing:0 "Advanced Computing Complex"
+ district_t_eternal_computing_desc:0 "Still worse than Urbi's PC."
+ district_t_eternal_computing_plural:0 "Advanced Computing Complexes"
  district_t_eternal_gardens:0 "Immaculate Gardens"
  district_t_eternal_gardens_desc:0 ""
+ district_t_eternal_gardens_plural:0 "Immaculate Gardens"
  district_t_eternal_fortress:0 "Celestial Fortress"
  district_t_eternal_fortress_desc:0 "The ultimate defence."
+ district_t_eternal_fortress_plural:0 "Celestial Fortresses"
  
  # Ascension Perks
  
@@ -125,8 +137,12 @@
  pc_gaiaarc:0 "Gaia Arcology"
  pc_gaiaarc_desc:0 "World partially engulfed by urban-industrial sprawl and partially covered in perfectly adjusted ecosystems to make it suitable for all species. Parts of it's natural litosphere are no longer discernible from orbit."
  pc_t_dimensional_alignment:0 "Dimensional Alignment"
- pc_t_dimensional_alignment_desc:0 "An artificial habitat designed to perfectly meet all kinds of our needs. The alignment anchors an artificial dimension offering almost endless habitation space.\n\nThe exterior of the Alignment offers a powerful energy generator and immense defensive capabilities to protect our civilization from all kinds of danger. The architecture and engineering used within this construct is also extremely resistant to time, so it could potentially house an entire civilization in the distant future."
- 
+ pc_t_dimensional_alignment_desc:0 "An artificial habitat designed to perfectly meet all kinds of our needs. The alignment anchors an artificial dimension offering almost endless habitation space.\n\nThe exterior of the Alignment offers a powerful energy generator and immense defensive capabilities to protect our civilization from all kinds of danger. The architecture and engineering used within this construct is also extremely resistant to time and provides room for energy efficiency improvement, so it could potentially house an entire civilization in the distant future."
+ pc_t_frame_alignment:0 "Frame Alignment"
+ pc_t_frame_alignment_desc:0 "An artificial frame habitat designed to perfectly meet all kinds of our needs. The alignment anchors an artificial dimension offering almost endless habitation space.\n\nThe exterior of the Alignment offers a powerful energy generator and immense defensive capabilities to protect our civilization from all kinds of danger. The architecture and engineering used within this construct is also extremely resistant to time and provides room for energy efficiency improvement, so it could potentially house an entire civilization in the distant future."
+ pc_t_phenomenal_alignment:0 "Phenomenal Alignment"
+ pc_t_phenomenal_alignment_desc:0 "An artificial habitat where it's inhabitants live in a perfect utopia, phronesis and eudaimonia, ready for everything that the universe and beyond may throw at them."
+
  t_frameworld_expansion:0 "Habitation Space Expansion"
  t_dimensional_alignment_reactor:0 "Alignment Central Reactor"
  t_dimensional_alignment_reactor_desc:0 "An advanced ultraefficient energy generator that powers the Alignment."

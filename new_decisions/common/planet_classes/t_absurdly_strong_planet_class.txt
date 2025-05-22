@@ -1,15 +1,16 @@
 pc_t_dimensional_alignment = {
-	# entity = "original_empire_ringworld_sphere_entity" # phenomenal core world from sofe
-	entity = "golden_fortress" # stellar alignment from sofe
+	entity = "t_original_empire_ringworld_sphere_entity" # phenomenal core world from sofe
+	# entity = "golden_fortress" # stellar alignment from sofe
 	# entity = "original_empire_ringworld_tech_entity" # phenomenal anchorage ring from sofe
-	overlay_entity = "acot_alpha_planet_shield_effect_entity" # shield is barely visible when using those models, tho acceptable with stellar alignment model
-	entity_scale = 1 # use 0.5 for phenomenal core world, 1.0 for stellar alignment, 0.5 for phenomenal anchorage
+	# overlay_entity = "acot_alpha_planet_shield_effect_entity" # shield is barely visible when using those models, tho acceptable with stellar alignment model
+	# overlay_entity = "acot_pmc_planet_large_shield_effect_entity" # phanon shield (is invisible)
+	entity_scale = 0.5 # use 0.5 for phenomenal core world, 1.0 for stellar alignment, 0.5 for phenomenal anchorage
 	enable_tilt = no
+
+	climate = "dry"
 	
 	icon = GFX_planet_type_city
 	icon_frame = 15
-
-	district_set = t_eternal_world
 
 	atmosphere_color 		= hsv { 0.80 0.2 0.2 }
 	atmosphere_intensity 	= 0.35
@@ -17,35 +18,133 @@ pc_t_dimensional_alignment = {
 
 	city_color_lut = "gfx/portraits/misc/colorcorrection_neutral.dds"
 
-	min_distance_from_sun = 60
-	max_distance_from_sun = 110
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
 	spawn_odds = 0
+	fixed_entity_scale = yes
 	
 	modifier = {
-		planet_orbital_bombardment_damage = -2 # good luck
-		planet_max_districts_mult = -0.25
-		planet_max_buildings_add = 100
-		planet_jobs_produces_mult = 0.25
-		pop_growth_speed = 1
+		planet_orbital_bombardment_damage = -2 # cant really bomb this since it bends dimensions to make more habitable space
+		# planet_max_districts_mult = -0.25
+		# planet_max_buildings_add = 100
+		planet_jobs_produces_mult = 1.5
 	}
 
-	colonization_tech = {
-		t_tech_dimensional_alignment
-	}
+	# colonization_tech = {
+	# 	t_tech_dimensional_alignment
+	# }
 
 	extra_orbit_size = 0
 	extra_planet_count = 0
 	
 	chance_of_ring = 0
+	fixed_city_level = 1
 	
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
 	
 	starting_planet = no
 	colonizable = yes
+	district_set = t_eternal_world
 	ideal = yes
 	uses_alternative_skies_for_moons = no
 	show_city = no
 	fixed_entity_scale = yes
 	is_artificial_planet = yes
+	
+	carry_cap_per_free_district = @carry_cap_high
+}
+
+pc_t_frame_alignment = {
+	entity = "t_original_empire_citadel_planet_entity"
+	entity_scale = 1
+	enable_tilt = no
+
+	climate = "dry"
+	
+	icon = GFX_planet_type_city
+	icon_frame = 15
+
+	atmosphere_color 		= hsv { 0.80 0.2 0.2 }
+	atmosphere_intensity 	= 0.35
+	atmosphere_width 		= 10.00
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_neutral.dds"
+
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+	spawn_odds = 0
+	fixed_entity_scale = yes
+	
+	modifier = {
+		planet_orbital_bombardment_damage = -2 # cant really bomb this since it bends dimensions to make more habitable space
+		planet_jobs_produces_mult = 2
+	}
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	fixed_city_level = 1
+	
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	
+	starting_planet = no
+	colonizable = yes
+	district_set = t_eternal_world
+	ideal = yes
+	uses_alternative_skies_for_moons = no
+	show_city = no
+	fixed_entity_scale = yes
+	is_artificial_planet = yes
+	
+	carry_cap_per_free_district = @carry_cap_high
+}
+
+pc_t_phenomenal_alignment = {
+	entity = "t_original_empire_citadel_planet_entity"
+	entity_scale = 1.5
+	enable_tilt = no
+
+	climate = "dry"
+	
+	icon = GFX_planet_type_city
+	icon_frame = 15
+
+	atmosphere_color 		= hsv { 0.80 0.2 0.2 }
+	atmosphere_intensity 	= 0.35
+	atmosphere_width 		= 10.00
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_neutral.dds"
+
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+	spawn_odds = 0
+	fixed_entity_scale = yes
+	
+	modifier = {
+		planet_orbital_bombardment_damage = -10 # cant really bomb this since it bends dimensions to make more habitable space
+		planet_jobs_produces_mult = 5
+	}
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	fixed_city_level = 1
+	
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	
+	starting_planet = no
+	colonizable = yes
+	district_set = t_eternal_world
+	ideal = yes
+	uses_alternative_skies_for_moons = no
+	show_city = no
+	fixed_entity_scale = yes
+	is_artificial_planet = yes
+	
+	carry_cap_per_free_district = @carry_cap_high
 }

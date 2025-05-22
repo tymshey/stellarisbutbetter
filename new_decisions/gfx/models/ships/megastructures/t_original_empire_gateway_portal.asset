@@ -1,0 +1,179 @@
+entity = {
+	name = "t_original_empire_gateway_portal_entity"
+	pdxmesh = "t_original_empire_gateway_portal_mesh"
+	
+	get_state_from_parent = no
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 
+		event = { time = 0 node = "center" particle = "t_original_empire_gateway_portal_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "ambient_origin_station" } }
+	}
+	
+	game_data = {
+		uv_animation_speed 		= -0.05
+		uv_animation_direction 	= { 0.5 1.0 }
+		bloom_factor = 0.8
+	}
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "t_original_empire_gateway_portal_attachment_entity"
+	pdxmesh = "t_original_empire_gateway_portal_mesh"
+	
+	get_state_from_parent = no
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	
+	game_data = {
+		uv_animation_speed 		= 0.05
+		uv_animation_direction 	= { -0.5 -1.0 }
+		bloom_factor = 0.8
+	}
+	
+	scale = 0.5
+}
+
+###############OUTER GATE#######################################
+
+entity = {
+	name = "t_sofe_outer_gate_entity"
+	game_data = {
+		size = 50
+	}
+
+	scale = 4.25
+	locator = { name = "root"	position = { 0 0 0 } rotation = { 0 0 0 } }		
+	locator = { name = "attacher"	position = { 0 0 0 } rotation = { 0 0 -90 } }	
+	locator = { name = "attacher2"	position = { 0 0 0 } rotation = { 180 0 -90 } }	
+
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "megastructure_gate_way_station_hum" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "megastructure_gate_way_portal_hum" stop_on_state_change = yes } }
+	}
+	
+	attach = { root = "t_original_empire_outergate_portal_entity" }
+	attach = { attacher2 = "t_outer_gate_ring_model_core_entity" }
+	attach = { attacher = "t_outer_gate_ring_hook_entity" }	
+
+}
+
+entity = {
+	name = "t_original_empire_outergate_portal_entity"
+	
+	get_state_from_parent = no
+	locator = { name = "center" position = { 0 0 0 } }	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 
+		event = { time = 0 node = "center" particle = "t_original_empire_gateway_portal_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "ambient_origin_station" } }
+		event = { time = 0 node = "center" particle = "t_sofe_energy_core_effect_large" keep_particle = yes trigger_once = yes sound = { soundeffect = "ambient_origin_station" } }
+	}
+	
+	scale = 1.25
+}
+
+
+
+# Rings
+entity = {
+	name = "t_outer_gate_ring_hook_entity"
+	
+	locator = { name = "attachment_01" position = { 0 0 0 } }
+	
+	attach = { attachment_01 = "t_outer_gate_ring_joint_entity" }
+	
+	scale = 3.00
+}
+
+entity = {
+	name = "t_outer_gate_ring_joint_entity"
+	
+	locator = { name = "loc01" position = { 250 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "loc02" position = { 216.5 0 125 } rotation = { 60 0 0 }}
+	locator = { name = "loc03" position = { 125 0 216.5 } rotation = { 30 0 0 }}
+	locator = { name = "loc04" position = { 0 0 250 } rotation = { 0 0 0 }}
+	locator = { name = "loc05" position = { -125 0 216.5 } rotation = { -30 0 0 }}
+	locator = { name = "loc06" position = { -216.5 0 125 } rotation = { -60 0 0 }}
+	locator = { name = "loc07" position = { -250 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "loc08" position = { -216.5 0 -125 } rotation = { -120 0 0 }}
+	locator = { name = "loc09" position = { -125 0 -216.5 } rotation = { -150 0 0 }}	
+	locator = { name = "loc10" position = { 0 0 -250 } rotation = { -180 0 0 }}
+	locator = { name = "loc11" position = { 125 0 -216.5 } rotation = { -210 0 0 }}
+	locator = { name = "loc12" position = { 216.5 0 -125 } rotation = { -240 0 0 }}
+	
+	attach = { "loc01" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc02" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc03" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc04" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc05" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc06" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc07" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc08" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc09" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc10" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc11" = "t_outer_gate_ring_model_hook_entity" }
+	attach = { "loc12" = "t_outer_gate_ring_model_hook_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle"  time_offset = { 0 100 } }
+	
+	scale = 0.115
+}
+
+
+entity = {
+	name = "t_outer_gate_ring_model_hook_entity"
+	
+	locator = { name = "hook" position = { 0 0 0 } rotation = { 180 0 -90 }}
+	locator = { name = "ring" position = { 0 0 0 } rotation = { 0 0 0 }}
+	
+	attach = { "hook" = "t_outer_gate_ring_model_entity" }
+	scale = 5.00
+}
+
+entity = {
+	name = "t_outer_gate_ring_model_core_entity"
+	pdxmesh = "t_original_empire_colossus_mesh"
+
+	scale = 2.15
+
+	default_state = "idle"
+	# Actual idle state when being in idle/moving.
+	state = { name = "idle" animation = "open" looping = no next_state = "idle" animation_blend_time = 5
+		
+		event = { time = 0 node = "light_locator_01" particle = "t_ship_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "t_ship_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_03" particle = "t_ship_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_04" particle = "t_ship_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_05" particle = "t_ship_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_06" particle = "t_ship_light_original_effect" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 0 node = "planet_killer_gun_01" particle = "original_empire_colossus_core_effect" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "large_shield_mid_effect_1" particle = "fallen_machine_empire_01_colossus_shield_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "large_shield_mid_effect_2" particle = "fallen_machine_empire_01_colossus_shield_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "large_shield_mid_effect_3" particle = "fallen_machine_empire_01_colossus_shield_effect" keep_particle = yes trigger_once = yes }
+	}
+}
+
+
+entity = {
+	name = "t_outer_gate_ring_model_entity"
+	pdxmesh = "t_original_empire_warship_large_mesh"
+	scale = 1.00
+	cull_radius = 500	
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 5
+		event = { time = 0 node = "light_locator_01" particle = "t_ship_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "t_ship_light_original_effect" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "moving" state_time = 5
+		event = { time = 0 node = "light_locator_01" particle = "t_ship_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "t_ship_light_original_effect" keep_particle = yes trigger_once = yes }	
+	}
+}

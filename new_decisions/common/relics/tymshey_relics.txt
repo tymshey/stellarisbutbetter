@@ -24,11 +24,10 @@ r_t_ancient_data_cache = {
 		potential = {
 			always = yes
 		}
-		all_technology_research_speed = 0.2
 		science_ship_survey_speed = 0.2
 	}
 
-	score = 1500
+	score = 500
 
 	active_effect = {
 		add_modifier = {
@@ -74,7 +73,6 @@ r_t_ancient_crystal_archive = {
 		potential = {
 			always = yes
 		}
-		pop_growth_speed = 0.1
 		planet_jobs_produces_mult = 0.1
 		damage_vs_country_type_extradimensional_mult = 0.2
 		damage_vs_country_type_extradimensional_2_mult = 0.2
@@ -91,7 +89,7 @@ r_t_ancient_crystal_archive = {
 				modifier = "relic_activation_cooldown"
 				days = @triumph_duration
 			}
-			add_resource = { minor_artifacts = 20 }
+			add_resource = { minor_artifacts = 25 }
 		}
 	}
 

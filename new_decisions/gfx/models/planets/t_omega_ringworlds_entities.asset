@@ -1,0 +1,192 @@
+
+
+###########################################################################
+###																		###
+###								Alignments								###
+###																		###
+###########################################################################	
+
+@ringworld_segment_size = 15
+
+## Dimensional Alignment
+
+###############
+
+entity = {
+	name = "t_original_empire_ringworld_seam_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+	
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "t_ringworld_seam_original_empire_diffuse.dds"
+		texture_normal = "t_ringworld_seam_original_empire_normal.dds"
+		texture_specular = "t_ringworld_seam_original_empire_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "t_ringworld_construction_original_empire_diffuse.dds"
+		texture_normal = "t_ringworld_construction_original_empire_normal.dds"
+		texture_specular = "t_ringworld_construction_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+	}
+}
+
+entity = {
+	name = "t_original_empire_citadel_planet_entity_01_entity"
+	locator = { name = "jumbo"	position = { 0 0 0 } rotation = { 0 0 0 } }		
+	locator = { name = "jumbo2"	position = { 0 0 0 } rotation = { 90 0 90 } }		
+	locator = { name = "root"	position = { 0 -10 0 } rotation = { 0 0 180 } }	
+	locator = { name = "root2"	position = { 0 10 0 } rotation = { 0 0 0 } }
+	locator = { name = "root3"	position = { 80 -20 0 } rotation = { -90 0 180 } }
+	locator = { name = "root4"	position = { -80 -20 0 } rotation = { 90 0 180 } }
+	locator = { name = "root5"	position = { 80 6.5 0 } rotation = { -90 180 180 } }
+	locator = { name = "root6"	position = { -80 6.5 0 } rotation = { 90 180 180 } }
+
+	game_data = {
+		size = 75
+	}
+
+
+	attach = { "jumbo" = "t_original_empire_ringworld_seam_entity_01_entity" }
+	attach = { "jumbo" = "t_original_empire_ringworld_citadel_entity" }
+	attach = { "root3" = "t_original_empire_ringworld_hangerboy_entity" }
+	attach = { "root4" = "t_original_empire_ringworld_hangerboy_entity" }
+	attach = { "root5" = "t_original_empire_ringworld_hangerboy_entity" }
+	attach = { "root6" = "t_original_empire_ringworld_hangerboy_entity" }
+}
+
+entity = {
+	name = "t_original_empire_ringworld_sphere_entity_01_entity"
+	locator = { name = "jumbo"	position = { 0 0 0 } rotation = { 0 0 0 } }		
+	locator = { name = "jumbo2"	position = { 0 0 0 } rotation = { 90 0 90 } }		
+	locator = { name = "root"	position = { 0 -10 0 } rotation = { 0 0 180 } }	
+	locator = { name = "root2"	position = { 0 10 0 } rotation = { 0 0 0 } }
+	locator = { name = "root3"	position = { 80 -20 0 } rotation = { -90 0 180 } }
+	locator = { name = "root4"	position = { -80 -20 0 } rotation = { 90 0 180 } }
+	locator = { name = "root5"	position = { 80 6.5 0 } rotation = { -90 180 180 } }
+	locator = { name = "root6"	position = { -80 6.5 0 } rotation = { 90 180 180 } }
+
+	game_data = {
+		size = 75
+	}
+
+
+	attach = { "jumbo" = "t_original_empire_ringworld_seam_entity_01_entity" }
+	attach = { "jumbo" = "t_original_empire_ringworld_tower_entity" }
+	attach = { "root3" = "t_original_empire_ringworld_hangerboy_entity" }
+	attach = { "root4" = "t_original_empire_ringworld_hangerboy_entity" }
+	attach = { "root5" = "t_original_empire_ringworld_hangerboy_entity" }
+	attach = { "root6" = "t_original_empire_ringworld_hangerboy_entity" }
+}
+
+entity = {
+	name = "t_original_empire_ringworld_tower_entity"
+	pdxmesh = "t_original_empire_outpost_mesh"
+	scale = 5.00
+	
+	meshsettings = {
+		name = "large_finished_MeshShape"
+		index = 0
+		texture_diffuse = "t_original_empire_stations_diffuse.dds"
+		texture_normal = "t_original_empire_stations_normal.dds"
+		texture_specular = "t_original_empire_stations_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "light_locator_01" particle = "t_ship_large_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "t_ship_large_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top" particle = "t_energy_core_original_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "bottom" particle = "t_energy_core_original_effect" keep_particle = yes trigger_once = yes }		
+	}
+
+	attach = { "top" = "t_golden_planet_supermini_gaia_entity" }
+	attach = { "bottom" = "t_golden_planet_supermini_gaia_entity" }
+}
+
+entity = {
+	name = "t_original_empire_ringworld_citadel_entity"
+	pdxmesh = "t_original_empire_citadel_mesh"
+	scale = 5.00
+	
+	meshsettings = {
+		name = "large_finished_MeshShape"
+		index = 0
+		texture_diffuse = "t_original_empire_stations_diffuse.dds"
+		texture_normal = "t_original_empire_stations_normal.dds"
+		texture_specular = "t_original_empire_stations_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = "light_locator_01" particle = "t_ship_large_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "t_ship_large_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top" particle = "t_energy_core_original_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "bottom" particle = "t_energy_core_original_effect" keep_particle = yes trigger_once = yes }		
+	}
+
+	attach = { "top" = "t_golden_planet_supermini_gaia_entity" }
+	attach = { "bottom" = "t_golden_planet_supermini_gaia_entity" }
+}
+
+entity = {
+	name = "t_original_empire_ringworld_hangerboy_entity"
+	pdxmesh = "t_original_empire_ringworld_hangerboy_mesh"
+	
+	scale = 6.50
+
+	default_state = "idle"
+	state = { name = idle	state_time = 5
+		event = { time = 0 node = "light_locator_01" particle = "t_ship_large_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "t_ship_large_light_original_effect" keep_particle = yes trigger_once = yes }
+	}
+	
+	state = { name = moving	state_time = 5
+		event = { time = 0 node = "light_locator_01" particle = "t_ship_large_light_original_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "t_ship_large_light_original_effect" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "death" state_time = 5 }
+	
+}
+
+entity = {
+	name = "t_original_empire_ringworld_phase_3_construction_entity"
+	cull_radius = 500.0
+	pdxmesh = "t_ringworld_seam_01_mesh"
+	
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "t_ringworld_seam_original_empire_diffuse.dds"
+		texture_normal = "t_ringworld_seam_original_empire_normal.dds"
+		texture_specular = "ringworld_seam_molluscoid_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+	
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+	
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+}

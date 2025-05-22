@@ -4,5 +4,5 @@ tags={
 	"Economy"
 }
 name="Stellaris but Better"
-supported_version="3.*.*"
+supported_version="4.*.*"
 remote_file_id="2572370447"

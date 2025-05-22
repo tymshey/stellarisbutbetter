@@ -130,3 +130,27 @@ entity = {
 	scale = 0.95
 	
 }
+
+entity = {
+	name = "t_golden_planet_shield_effect_entity"
+	pdxmesh = "acot_alpha_planet_shield_effect_mesh"
+	
+	#get_state_from_parent = no
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5
+	#	start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+	#	start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+		start_event = { node = root particle = "acot_alpha_planet_shield_effect" keep_particle = yes trigger_once = yes }
+	}
+	
+	game_data = { 
+		bloom_factor = 1.2 
+		uv_animation_speed 		= 2
+		uv_animation_direction 	= { 0.0 -0.02 }
+	}
+	
+	locator = { name = "root" position = { 0 0 0 } }
+	
+	scale = 5
+}

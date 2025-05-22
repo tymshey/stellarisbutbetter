@@ -1,6 +1,14 @@
 district_t_utopian_arcology = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
 
 	show_on_uncolonized = {
 		uses_district_set = t_eternal_world
@@ -36,9 +44,7 @@ district_t_utopian_arcology = {
 	# Modifier
 
 	planet_modifier = {
-		planet_housing_add = 20
-		planet_amenities_add = 10
-		trade_value_add = 10
+		planet_housing_add = 1500
 	}
 	
 	# ACOT Jobs
@@ -49,8 +55,8 @@ district_t_utopian_arcology = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_acot_overlord_add = 1
-			job_acot_overseer_add = 2
+			job_acot_overlord_add = 100
+			job_acot_overseer_add = 200
 		}
 	}
 
@@ -60,8 +66,8 @@ district_t_utopian_arcology = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_acot_overlord_drone_add = 1
-			job_acot_overseer_drone_add = 2
+			job_acot_overlord_drone_add = 100
+			job_acot_overseer_drone_add = 200
 		}
 	}	
 
@@ -71,8 +77,8 @@ district_t_utopian_arcology = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_acot_overlord_droid_add = 1
-			job_acot_overseer_droid_add = 2
+			job_acot_overlord_droid_add = 100
+			job_acot_overseer_droid_add = 200
 		}
 	}
 	
@@ -84,7 +90,7 @@ district_t_utopian_arcology = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_maintenance_drone_add = 5
+			job_maintenance_drone_add = 100
 		}
 	}
 	
@@ -96,7 +102,7 @@ district_t_utopian_arcology = {
 			owner = { has_non_swapped_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 10
+			planet_housing_add = 500
 		}
 	}
 
@@ -108,7 +114,7 @@ district_t_utopian_arcology = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 5
+			planet_housing_add = 500
 		}
 	}
 
@@ -121,7 +127,7 @@ district_t_utopian_arcology = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 5
+			planet_housing_add = 1000
 		}
 	}
 	
@@ -136,7 +142,7 @@ district_t_utopian_arcology = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 10
+			job_maintenance_drone_add = 100
 		}
 	}
 
@@ -148,7 +154,7 @@ district_t_utopian_arcology = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 10
+			job_clerk_add = 100
 		}
 	}
 
@@ -158,7 +164,7 @@ district_t_utopian_arcology = {
 			owner = { has_non_swapped_tradition = tr_prosperity_interstellar_franchising }
 		}
 		modifier = {
-			job_clerk_add = 10
+			job_clerk_add = 100
 		}
 	}
 
@@ -187,14 +193,22 @@ district_t_utopian_arcology = {
 		weight = 0
 		modifier = {
 			weight = 5
-			free_housing < 10
+			free_housing < 100
 		}
 	}
 }
 
 district_t_dimensional_fabricator = {
-base_buildtime = 600
+	base_buildtime = 600
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
 
 	show_on_uncolonized = {
 		uses_district_set = t_eternal_world
@@ -210,11 +224,11 @@ base_buildtime = 600
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_artisan_add = 10
-			job_foundry_add = 10
-			job_mote_harvester_add = 1
-			job_crystal_miner_add = 1
-			job_extractor_add = 1
+			job_artisan_add = 1000
+			job_foundry_add = 1000
+			job_mote_harvester_add = 500
+			job_crystal_miner_add = 500
+			job_extractor_add = 500
 		}
 	}	
 	
@@ -224,10 +238,11 @@ base_buildtime = 600
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_artisan_drone_add = 10
-			job_mote_harvester_drone_add = 1
-			job_crystal_mining_drone_add = 1
-			job_gas_extraction_drone_add = 1
+			job_artisan_drone_add = 1000
+			job_fabricator_add = 1000
+			job_mote_harvester_drone_add = 500
+			job_crystal_mining_drone_add = 500
+			job_gas_extraction_drone_add = 500
 		}
 	}
 
@@ -253,22 +268,23 @@ base_buildtime = 600
 			sr_dark_matter = 5
 		}
 		produces = {
-			food = 100
-			minerals = 100
-			consumer_goods = 50
+			food = 200
+			minerals = 200
+			consumer_goods = 200
 			energy = 100
-			rare_crystals = 10
-			exotic_gases = 10
-			volatile_motes = 10
-			alloys = 10
-			sr_zro = 5
-			sr_living_metal = 5
+			rare_crystals = 50
+			exotic_gases = 50
+			volatile_motes = 50
+			alloys = 50
+			sr_zro = 10
+			sr_living_metal = 10
+			sr_dark_matter = 10
 			acot_sr_dark_energy = 10
 		}
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2
+		planet_housing_add = 200
 	}
 
 	ai_weight = {
@@ -277,8 +293,16 @@ base_buildtime = 600
 }
 
 district_t_eternal_library = {
-base_buildtime = 600
+	base_buildtime = 600
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
 
 	show_on_uncolonized = {
 		uses_district_set = t_eternal_world
@@ -294,7 +318,9 @@ base_buildtime = 600
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_researcher_add = 10
+			job_physicist_add = 500
+			job_biologist_add = 500
+			job_engineer_add = 500
 		}
 	}	
 	
@@ -304,7 +330,9 @@ base_buildtime = 600
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_calculator_add = 10
+			job_calculator_physicist_add = 500
+			job_calculator_biologist_add = 500
+			job_calculator_engineer_add = 500
 		}
 	}
 	
@@ -316,7 +344,7 @@ base_buildtime = 600
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_acot_voidsphere_labman_add = 2
+			job_acot_voidsphere_labman_add = 500
 		}
 	}	
 	
@@ -326,7 +354,7 @@ base_buildtime = 600
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_acot_voidsphere_labdrone_add = 2
+			job_acot_voidsphere_labdrone_add = 500
 		}
 	}	
 
@@ -359,7 +387,105 @@ base_buildtime = 600
 	}
 
 	planet_modifier = {
-		planet_housing_add = 8
+		planet_housing_add = 800
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+district_t_eternal_computing = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
+
+	show_on_uncolonized = {
+		uses_district_set = t_eternal_world
+	}
+
+	potential = {
+		uses_district_set = t_eternal_world
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			
+		}
+	}
+	
+	# ACOT Jobs
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			
+		}
+	}	
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_arcology_housing
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 10000
+			rare_crystals = 100
+			alloys = 2500
+		}
+		upkeep = {
+			energy = 50
+			acot_sr_dark_energy = 5
+			sr_dark_matter = 5
+		}
+		produces = {
+			society_research = 750
+			physics_research = 750
+			engineering_research = 750
+		}
+	}
+
+	planet_modifier = {
+		
 	}
 
 	ai_weight = {
@@ -368,8 +494,16 @@ base_buildtime = 600
 }
 
 district_t_eternal_gardens = {
-base_buildtime = 600
+	base_buildtime = 600
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
 
 	show_on_uncolonized = {
 		uses_district_set = t_eternal_world
@@ -407,7 +541,7 @@ base_buildtime = 600
 	}
 
 	planet_modifier = {
-		planet_housing_add = 8
+		planet_housing_add = 800
 		planet_amenities_add = 50
 	}
 	
@@ -415,8 +549,8 @@ base_buildtime = 600
 		potential = { 
 			owner = { is_gestalt = no }
 		}
-		job_farmer_add = 5
-		job_healthcare_add = 1
+		job_farmer_add = 500
+		job_healthcare_add = 100
 	}
 
 	ai_weight = {
@@ -426,6 +560,14 @@ base_buildtime = 600
 district_t_eternal_fortress = {
 	base_buildtime = 360
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
 	
 	show_on_uncolonized = {
 		uses_district_set = t_eternal_world
@@ -455,7 +597,7 @@ district_t_eternal_fortress = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 5
+		planet_housing_add = 1000
 		planet_stability_add = 20
 	}
 	
@@ -468,9 +610,9 @@ district_t_eternal_fortress = {
 			}
 		}
 		modifier = {
-			job_acot_enforcer_add = 4
-			job_enforcer_add = 7
-			job_soldier_add = 7
+			job_acot_enforcer_add = 400
+			job_enforcer_add = 500
+			job_soldier_add = 500
 		}
 	}
 	triggered_planet_modifier = {
@@ -480,9 +622,9 @@ district_t_eternal_fortress = {
 			}
 		}
 		modifier = {
-			job_acot_enforcer_drone_add = 4
-			job_patrol_drone_add = 7
-			job_warrior_drone_add = 7
+			job_acot_enforcer_drone_add = 400
+			job_patrol_drone_add = 500
+			job_warrior_drone_add = 500
 		}
 	}
 

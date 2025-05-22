@@ -14,13 +14,14 @@ pc_gaiaarc = {
 	modifier = {
 		planet_jobs_produces_mult = 0.20
 		pop_growth_speed = 0.50
-		planet_max_buildings_add = 20
+		# planet_max_buildings_add = 20
 		planet_amenities_mult = 0.2
 	}
 	
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
 	spawn_odds = 0
+	fixed_entity_scale = yes
 	
 	extra_orbit_size = 0
 	extra_planet_count = 0

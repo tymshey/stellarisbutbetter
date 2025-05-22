@@ -4,6 +4,6 @@
 t_relic_ancient_data_cache_boost = {
 	icon = "gfx/interface/icons/planet_modifiers/mod_pm_consecrated_worlds.dds"
 	icon_frame = 1
-	all_technology_research_speed = 0.25
-	survey_speed = 0.5
+	all_technology_research_speed = 0.1
+	survey_speed = 0.33
 }
